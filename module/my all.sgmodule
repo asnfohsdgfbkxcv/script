@@ -3,6 +3,8 @@
 
 [Script]
 # 定时签到
+# v2ex
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
 # 人人视频
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js
 # 哈啰出行
@@ -19,4 +21,4 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
 
 [MITM]
-hostname = %APPEND% api-hdcj.9w9.com, *.bilibili.com, *.rrys2019.com, ios.zmzapi.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, gameapi.hellobike.com, *.rr.tv
+hostname = %APPEND% api-hdcj.9w9.com, *.bilibili.com, *.rrys2019.com, ios.zmzapi.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, gameapi.hellobike.com, *.rr.tv, *.v2ex.com
