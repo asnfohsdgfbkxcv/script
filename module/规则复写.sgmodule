@@ -1,4 +1,5 @@
-#!desc=规则复写 李哥
+#!name=规则复写
+#!desc=李哥
 [Host]
 *.taobao.com = server:223.5.5.5
 *.tmall.com = server:223.5.5.5
