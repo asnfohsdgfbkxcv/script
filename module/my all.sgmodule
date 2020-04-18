@@ -26,6 +26,8 @@ cron "24 7 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/ma
 # dlercloud check in
 http-request ^https:\/\/dleris\.best\/user script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/dlercloud.js
 cron "0/360 * * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/dlercloud.js
+#钉钉签到提醒
+cron "25 8,35 17 * * 1-5" script-path=https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js
 
 [MITM]
 hostname = %APPEND% dleris.best, api-hdcj.9w9.com, *.bilibili.com, *.rrys2019.com, ios.zmzapi.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, gameapi.hellobike.com, *.rr.tv, *.v2ex.com, i.meituan.com, api.1sapp.com
