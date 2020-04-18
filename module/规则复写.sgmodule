@@ -29,8 +29,6 @@ cdn.pcbeta.css.inimc.com = 120.52.19.113
 ip6-localhost = ::1
 ip6-loopback = ::1
 
-
-
 [URL Rewrite]
 ^http:\/\/115\.com\/\?ct=sign$ http://115.com/lx?taskdg=1 header
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
