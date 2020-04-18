@@ -1,4 +1,4 @@
-#!desc=李哥
+#!desc=Rewrite 李哥
 [Host]
 *.taobao.com = server:223.5.5.5
 *.tmall.com = server:223.5.5.5
