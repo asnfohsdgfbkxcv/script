@@ -1,0 +1,14 @@
+#!name=Q-Search
+#!desc=修改 Safari Search Add-ons, forked from Neurogram.
+
+[URL Rewrite]
+^https:\/\/baidu.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+^https:\/\/baidu.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+^https:\/\/baidu.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+^https:\/\/baidu.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+^https:\/\/baidu.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+^https:\/\/baidu.com\/\?q=ddg\+([^&]+).+ http://duckduckgo.com/?q=$1 302
+^https:\/\/baidu.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
+[MITM]
+hostname = %APPEND% baidu.com
