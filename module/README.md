@@ -1,1 +1,39 @@
 surge module
+
+# 获取cookies
+## 登录网站
+https://bean.m.jd.com
+
+https://www.52pojie.cn/home.php?mod=space
+
+https://www.bilibili.com/
+https://live.bilibili.com/
+
+https://music.163.com/m/login
+https://music.163.com/
+
+https://zhiyou.smzdm.com/user/login
+https://www.smzdm.com/
+
+https://www.v2ex.com/
+https://www.v2ex.com/mission/daily
+
+http://www.rrys2019.com/
+
+## 登录APP
+
+喜马拉雅
+
+哈啰出行
+
+京东到家
+
+美团
+
+QQ音乐
+
+趣头条
+
+人人视频
+
+顺丰速运
