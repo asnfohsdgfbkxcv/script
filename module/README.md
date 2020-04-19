@@ -2,6 +2,9 @@ surge module
 
 # 获取cookies
 ## 登录网站
+https://tieba.baidu.com
+https://tieba.baidu.com/index/
+
 https://bean.m.jd.com
 
 https://www.52pojie.cn/home.php?mod=space
@@ -21,6 +24,8 @@ https://www.v2ex.com/mission/daily
 http://www.rrys2019.com/
 
 ## 登录APP
+
+WPS
 
 喜马拉雅
 
