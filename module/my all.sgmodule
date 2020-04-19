@@ -64,8 +64,8 @@ http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.g
 # 银瓜子转硬币 
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
 # dlercloud check in
-http-request ^https:\/\/dleris\.best\/user script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/dlercloud.js
-cron "0/3 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/dlercloud.js
+http-request ^https:\/\/dleris\.best\/user script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/dlercloud.js
+cron "0/3 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/dlercloud.js
 
 [MITM]
 hostname = %APPEND% dleris.best, *.bilibili.com, *.rrys2019.com, ios.zmzapi.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, gameapi.hellobike.com, *.rr.tv, *.v2ex.com, i.meituan.com, api.1sapp.com, daojia.jd.com, music.163.com, *.y.qq.com, www.52pojie.cn, api.m.jd.com, *.smzdm.com, zt.wps.cn, *.iqiyi.com, tieba.baidu.com
