@@ -1,5 +1,5 @@
 #!name=Task CHECK IN
-#!desc=定时签到，搭配 nzw9314 收集整理的 get cookies 脚本。
+#!desc=定时签到脚本
 #!system=ios
 
 [Script]
