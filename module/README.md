@@ -22,3 +22,5 @@ http://www.rrys2019.com/
 WPS, 喜马拉雅, 哈啰出行, 京东到家, 美团, QQ音乐, 趣头条, 人人视频, 顺丰速运
 
 # [lhie1 All in One Module](https://api.dler.io/render?path=templates/lhie1_mods.tpl&mod=)
+
+# [nzw9314/Surge/Module](https://github.com/nzw9314/Surge/tree/master/Module)
