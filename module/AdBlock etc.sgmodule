@@ -3,6 +3,6 @@
 
 # 去广告
 [Rule]
-# RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,AdBlock
-# RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,AdBlock
-RULE-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,AdBlock
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,REJECT
