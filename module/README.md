@@ -1,5 +1,5 @@
 surge module
-
+[module 模块官方介绍](https://community.nssurge.com/d/225-module)
 # 获取cookies
 ## 登录网站
 https://tieba.baidu.com, https://tieba.baidu.com/index/
