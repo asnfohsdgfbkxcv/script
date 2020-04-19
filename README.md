@@ -2,7 +2,7 @@
 
 surge ios addons.
 
-Special Thanks（No ranking）：
+# Special Thanks（No ranking）：
 
 @nzw9314
 
