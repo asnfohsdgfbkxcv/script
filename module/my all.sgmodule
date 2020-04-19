@@ -4,6 +4,9 @@
 
 [Script]
 # 定时签到
+# 微信小程序"活动抽奖"
+cron "28 0 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
+http-request ^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
 # 百度
 cron "27 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
 http-request ^https?:\/\/tieba\.baidu\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
@@ -68,4 +71,4 @@ http-request ^https:\/\/dleris\.best\/user script-path=https://raw.githubusercon
 cron "0/3 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/dlercloud.js
 
 [MITM]
-hostname = %APPEND% dleris.best, *.bilibili.com, *.rrys2019.com, ios.zmzapi.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, gameapi.hellobike.com, *.rr.tv, *.v2ex.com, i.meituan.com, api.1sapp.com, daojia.jd.com, music.163.com, *.y.qq.com, www.52pojie.cn, api.m.jd.com, *.smzdm.com, zt.wps.cn, *.iqiyi.com, tieba.baidu.com
+hostname = %APPEND% dleris.best, *.bilibili.com, *.rrys2019.com, ios.zmzapi.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, gameapi.hellobike.com, *.rr.tv, *.v2ex.com, i.meituan.com, api.1sapp.com, daojia.jd.com, music.163.com, *.y.qq.com, www.52pojie.cn, api.m.jd.com, *.smzdm.com, zt.wps.cn, *.iqiyi.com, tieba.baidu.com, api-hdcj.9w9.com
