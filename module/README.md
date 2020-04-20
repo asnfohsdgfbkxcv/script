@@ -26,6 +26,6 @@ WPS, 喜马拉雅, 哈啰出行, 京东到家, 美团, QQ音乐, 趣头条, 人�
 
 available module: 52ci, aweme, baha, biliad, bilidb, hp, jddb, nf, weibo, ytb, zhihu, iqiyidb, tikul, tikwm
 
-选择all，即是全部脚本。
+选择 all ，即是全部脚本。
 
 ## [nzw9314/Surge/Module](https://github.com/nzw9314/Surge/tree/master/Module)
