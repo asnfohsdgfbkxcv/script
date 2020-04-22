@@ -34,7 +34,7 @@ http-response ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg requires-body=true,scr
 cron "20 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js
 http-request ^https?:\/\/music\.163\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js
 # 京东到家
-cron "19 0 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jddj.js
+cron "19 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js
 http-request ^https:\/\/daojia.jd.com/client(.*?)functionId=signin(.*?)userSigninNew script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.cookie.js
 # 趣头条
 cron "18 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js
