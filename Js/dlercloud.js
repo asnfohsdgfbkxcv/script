@@ -1,33 +1,33 @@
 /*
 Dler Cloud 签到脚本
 
-说明：登录 https://dleris.best/ 获取 cookie，cookie有效期为 31 天，失效后需重新获取
+说明：登录 https://dler.best/ 获取 cookie，cookie有效期为 31 天，失效后需重新获取
 
 QX 1.0.5+ :
 [rewrite_local]
-^https:\/\/dleris\.best\/user url script-request-header dlercloud.js
+^https:\/\/dler\.best\/user url script-request-header dlercloud.js
 
 [task_local]
 0/60 * * * * dlercloud.js
 
 [mitm]
-hostname = dleris.best
+hostname = dler.best
 
 
 Surge 4.0 :
 [Script]
-http-request ^https:\/\/dleris\.best\/user script-path=dlercloud.js
+http-request ^https:\/\/dler\.best\/user script-path=dlercloud.js
 cron "0/60 * * * *" script-path=dlercloud.js
 
 [MITM]
-hostname = dleris.best
+hostname = dler.best
 */
 
 const $util = init()
 const title = 'Dler Cloud'
 const cookieName = 'DlerCloud'
 const totalKey = 'DlerCloudTotal'
-const url = 'https://dleris.best'
+const url = 'https://dler.best'
 
 const checkinResult = {
   msg: undefined,
