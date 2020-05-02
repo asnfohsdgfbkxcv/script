@@ -7,7 +7,7 @@
 # 米读
 cron "26 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduSign.js
 cron "0/1 * * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduRead.js
-http-request ^https:\/\/apiwz\.midukanshu\.com script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/midu.cookie.js
+http-request ^https:\/\/apiwz\.midukanshu\.com script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/midu.cookie.js, requires-body=true
 # 微信小程序"活动抽奖"
 cron "25 0 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
 cron "25 8 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
@@ -58,4 +58,4 @@ http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.g
 cron "11 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
 
 [MITM]
-hostname = %APPEND% *.bilibili.com, *.rrys2019.com, ios.zmzapi.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, gameapi.hellobike.com, *.rr.tv, *.v2ex.com, i.meituan.com, api.1sapp.com, daojia.jd.com, *.smzdm.com, zt.wps.cn, tieba.baidu.com, api-hdcj.9w9.com, apiwz.midukanshu.com
+hostname = %APPEND% apiwz.midukanshu.com, *.bilibili.com, *.rrys2019.com, ios.zmzapi.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, gameapi.hellobike.com, *.rr.tv, *.v2ex.com, i.meituan.com, api.1sapp.com, daojia.jd.com, *.smzdm.com, zt.wps.cn, tieba.baidu.com, api-hdcj.9w9.com
