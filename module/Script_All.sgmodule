@@ -2,6 +2,14 @@
 #!desc=脚本合集,用于Remove Ads + unlock vip，精简nzw9314整理的脚本，去掉和lhie1重复的脚本。
 #!system=ios
 
+[General]
+# 优酷 视频去片头广告
+force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
+
+[Rule]
+# 优酷 视频去片头广告
+URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGI
+
 [URL Rewrite]
 # 抖音去广告
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
