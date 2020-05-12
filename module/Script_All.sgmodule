@@ -2,7 +2,23 @@
 #!desc=脚本合集,用于Remove Ads + unlock vip，精简nzw9314整理的脚本，去掉和lhie1重复的脚本。
 #!system=ios
 
+[URL Rewrite]
+# 抖音去广告
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
+# 小小影视Vip, 去广告
+https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
+
 [Script]
+# 抖音去广告
+douyin_post.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme/v1/aweme\/post\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_post.js
+douyin_feed.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_feed.js
+douyin_follow.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/follow\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_follow.js
+douyin_naerby.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/nearby\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_nearby.js
+# bilibili开启1080P+
+开启1080P+ = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=Script/BiliHD.js
 # Docments vip
 documents.js = script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/documents.js
 # 微信公众号
@@ -12,8 +28,10 @@ http-response ^https?:\/\/.*\.snssdk\.com/bds/feed/stream/ requires-body=1,max-s
 http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js
 # 酷我音乐SVIP (By yxiaocai)
 Kuwo.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js,type=http-response,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)
-# 小小影视Vip (By Meeta)
+# 小小影视Vip, 去广告
+xxysad.js = type=http-response,pattern=https:\/\/.*\/getGlobalData,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/xxysad.js
 xxys.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,type=http-response,pattern=https:\/\/.*\.xiaoxiao.*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData)
+
 # 爱美剧Vip (by huihui）(官网：app.meiju2018.com)
 aimeiju.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js,type=http-response,pattern=^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index)
 # 哔哩哔哩番剧开启1080P+
@@ -46,4 +64,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 XMind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/XMind.js,type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
 
 [MITM]
-hostname = %APPEND% mp.weixin.qq.com, *.snssdk.com, vip1.kuwo.cn, *.xiaoxiao*.com, api.bjxkhc.com, api.bilibili.com, vsco.co, api.vnision.com, ap*.intsig.net, api.vuevideo.net, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, pay.wecut.com, *.bjxkhc.com, app.flashdown365.com, api.rr.tv, account.wps.cn, tncj.hortorgames.com, api.ithome.com, www.xmind.cn
+hostname = %APPEND% mp.weixin.qq.com, *.snssdk.com, vip1.kuwo.cn, *.xiaoxiao*.com, *.xiaoxiaoimg.com,*.xiaoxiaoapps.com,*.xiaoxiaoappxs.comapi.bjxkhc.com, api.bilibili.com, vsco.co, api.vnision.com, ap*.intsig.net, api.vuevideo.net, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, pay.wecut.com, *.bjxkhc.com, app.flashdown365.com, api.rr.tv, account.wps.cn, tncj.hortorgames.com, api.ithome.com, www.xmind.cn
