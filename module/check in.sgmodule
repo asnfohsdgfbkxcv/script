@@ -4,6 +4,9 @@
 
 [Script]
 # 定时签到
+# 来客有礼 小程序
+lkyl.js = type=cron,cronexp=22 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
+lkyl.js = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 # 百度
 cron "21 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
 http-request ^https?:\/\/tieba\.baidu\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
@@ -44,4 +47,4 @@ http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.g
 cron "11 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
 
 [MITM]
-hostname = %APPEND% tieba.baidu.com, zt.wps.cn, *.smzdm.com, daojia.jd.com, i.meituan.com, *.v2ex.com, *.rr.tv, gameapi.hellobike.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rrys2019.com, ios.zmzapi.com, *.bilibili.com
+hostname = %APPEND% draw.jdfcloud.com, tieba.baidu.com, zt.wps.cn, *.smzdm.com, daojia.jd.com, i.meituan.com, *.v2ex.com, *.rr.tv, gameapi.hellobike.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rrys2019.com, ios.zmzapi.com, *.bilibili.com
