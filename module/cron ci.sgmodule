@@ -4,10 +4,13 @@
 
 [Script]
 # 定时签到
+# 来客有礼 小程序
+lkyl.js = type=cron,cronexp=22 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
+lkyl.js = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 # 米读
 cron "26 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduSign.js
-cron "0 0/3 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduSign.js
-cron "0/1 * * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduRead.js
+# cron "0 0/3 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduSign.js
+# cron "0/1 * * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduRead.js
 http-request ^https:\/\/apiwz\.midukanshu\.com script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/midu.cookie.js, requires-body=true
 # 微信小程序"活动抽奖"
 cron "25 0 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
@@ -21,4 +24,4 @@ http-request ^https:\/\/api\.1sapp\.com\/content\/readV2? script-path=https://ra
 http-request ^https:\/\/api\.1sapp\.com\/x\/feed\/getReward? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
 
 [MITM]
-hostname = %APPEND% apiwz.midukanshu.com, api-hdcj.9w9.com, api.1sapp.com
+hostname = %APPEND% draw.jdfcloud.com, apiwz.midukanshu.com, api-hdcj.9w9.com, api.1sapp.com
