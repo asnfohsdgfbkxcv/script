@@ -39,11 +39,8 @@ Kuwo.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 # 小小影视Vip, 去广告
 xxysad.js = type=http-response,pattern=https:\/\/.*\/getGlobalData,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/xxysad.js
 xxys.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,type=http-response,pattern=https:\/\/.*\.xiaoxiao.*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData)
-
 # 爱美剧Vip (by huihui）(官网：app.meiju2018.com)
 aimeiju.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js,type=http-response,pattern=^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index)
-# 哔哩哔哩番剧开启1080P+
-bilifj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/bilifj.js,type=http-response,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/player\/api\/playurl
 # VSCO滤镜VIP
 vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,type=http-response,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/
 # 大片-视频编辑器 VIP
