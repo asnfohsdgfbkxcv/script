@@ -1,6 +1,11 @@
 #!name=Script - All
 #!desc=无人做模块的简单脚本。
 #!system=ios
+[Rule]
+# Block iOS Update
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
 
 [Script]
 # bilibili开启1080P+
