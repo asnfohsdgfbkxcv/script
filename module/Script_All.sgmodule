@@ -1,23 +1,6 @@
 #!name=Script - All
-#!desc=脚本合集,用于Remove Ads + unlock vip，精简nzw9314整理的脚本，去掉和lhie1重复的脚本。
+#!desc=无人做模块的简单脚本。
 #!system=ios
-
-[General]
-# 优酷 视频去片头广告
-force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
-
-[Rule]
-# 优酷 视频去片头广告
-URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGI
-
-[URL Rewrite]
-# 抖音去广告
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
-# 小小影视Vip, 去广告
-https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
 
 [Script]
 # bilibili开启1080P+
@@ -64,4 +47,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 XMind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/XMind.js,type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
 
 [MITM]
-hostname = %APPEND% mp.weixin.qq.com, *.snssdk.com, vip1.kuwo.cn, *.xiaoxiao*.com, *.xiaoxiaoimg.com,*.xiaoxiaoapps.com,*.xiaoxiaoappxs.comapi.bjxkhc.com, api.bilibili.com, vsco.co, api.vnision.com, ap*.intsig.net, api.vuevideo.net, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, pay.wecut.com, *.bjxkhc.com, app.flashdown365.com, api.rr.tv, account.wps.cn, tncj.hortorgames.com, api.ithome.com, www.xmind.cn
+hostname = %APPEND% mp.weixin.qq.com, vip1.kuwo.cn, *.xiaoxiao*.com, *.xiaoxiaoimg.com,*.xiaoxiaoapps.com,*.xiaoxiaoappxs.comapi.bjxkhc.com, api.bilibili.com, vsco.co, api.vnision.com, ap*.intsig.net, api.vuevideo.net, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, pay.wecut.com, *.bjxkhc.com, app.flashdown365.com, api.rr.tv, account.wps.cn, tncj.hortorgames.com, api.ithome.com, www.xmind.cn
