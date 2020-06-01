@@ -20,11 +20,6 @@ URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGI
 https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
 
 [Script]
-# 抖音去广告
-douyin_post.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme/v1/aweme\/post\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_post.js
-douyin_feed.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_feed.js
-douyin_follow.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/follow\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_follow.js
-douyin_naerby.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/nearby\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_nearby.js
 # bilibili开启1080P+
 开启1080P+ = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/Surge/master/Script/BiliHD.js
 # Docments vip
