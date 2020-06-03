@@ -9,12 +9,7 @@ lkyl.js = type=cron,cronexp=0 0/5 * * *,script-path=https://raw.githubuserconten
 lkyl.js = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 # 微信小程序"活动抽奖"
 cron "0 0/5 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
-http-request ^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
-# 趣头条
-cron "0 0/5 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js
-http-request ^https:\/\/api\.1sapp\.com\/sign\/info? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
-http-request ^https:\/\/api\.1sapp\.com\/content\/readV2? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
-http-request ^https:\/\/api\.1sapp\.com\/x\/feed\/getReward? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
+http-request ^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/
 # 定时签到
 # 多看阅读
 cron "23 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.js
@@ -62,4 +57,4 @@ http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.g
 cron "11 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
 
 [MITM]
-hostname = %APPEND% draw.jdfcloud.com, api-hdcj.9w9.com, api.1sapp.com, www.duokan.com, music.163.com, tieba.baidu.com, zt.wps.cn, *.smzdm.com, daojia.jd.com, i.meituan.com, *.v2ex.com, *.rr.tv, gameapi.hellobike.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rrys2019.com, ios.zmzapi.com, *.bilibili.com
+hostname = %APPEND% draw.jdfcloud.com, www.duokan.com, music.163.com, tieba.baidu.com, zt.wps.cn, *.smzdm.com, daojia.jd.com, i.meituan.com, *.v2ex.com, *.rr.tv, gameapi.hellobike.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rrys2019.com, ios.zmzapi.com, *.bilibili.com
