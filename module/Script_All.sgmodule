@@ -28,13 +28,13 @@ URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ads/index,REJECT-TINYGIF
 (?<=\?version_code=)16..(?=.?.?&) 1 307 
 
 # Q-Search
-^https:\/\/baidu.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
-^https:\/\/baidu.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
-^https:\/\/baidu.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
-^https:\/\/baidu.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
-^https:\/\/baidu.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
-^https:\/\/baidu.com\/\?q=ddg\+([^&]+).+ http://duckduckgo.com/?q=$1 302
-^https:\/\/baidu.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 [Script]
 # 知乎去广告
@@ -78,4 +78,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 XMind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/XMind.js,type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
 
 [MITM]
-hostname = %APPEND% api.zhihu.com, www.zhihu.com, *.uve.weibo.com, api.weibo.cn, mapi.weibo.com, storage.wax.weibo.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, baidu.com, mp.weixin.qq.com, *.xiaoxiao*.com, *.xiaoxiaoimg.com,*.xiaoxiaoapps.com,*.xiaoxiaoappxs.comapi.bjxkhc.com, api.vnision.com, ap*.intsig.net, api.rr.tv, account.wps.cn, tncj.hortorgames.com, api.ithome.com, www.xmind.cn
+hostname = %APPEND% api.zhihu.com, www.zhihu.com, *.uve.weibo.com, api.weibo.cn, mapi.weibo.com, storage.wax.weibo.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, duckduckgo.com, mp.weixin.qq.com, *.xiaoxiao*.com, *.xiaoxiaoimg.com,*.xiaoxiaoapps.com,*.xiaoxiaoappxs.comapi.bjxkhc.com, api.vnision.com, ap*.intsig.net, api.rr.tv, account.wps.cn, tncj.hortorgames.com, api.ithome.com, www.xmind.cn
