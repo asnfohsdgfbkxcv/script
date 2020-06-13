@@ -7,11 +7,12 @@
 # 来客有礼 小程序
 lkyl.js = type=cron,cronexp=0 0/5 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 lkyl.js = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
-# 微信小程序"活动抽奖"
-cron "0 0/5 * * *" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
-http-request ^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/master/Js/WeChatLottery.js
 
 # 定时签到
+# 滴滴出行
+cron "23 8 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
+cron "23 21 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 # 京东
 京东多合一签到 = type=cron,cronexp=22 8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 京东多合一签到 = type=cron,cronexp=22 21 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -68,4 +69,4 @@ cron "11 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scrip
 cron "11 21 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, www.52pojie.cn, draw.jdfcloud.com, www.duokan.com, zt.wps.cn, daojia.jd.com, i.meituan.com, *.v2ex.com, *.rr.tv, gameapi.hellobike.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rrys2019.com, ios.zmzapi.com, *.bilibili.com
+hostname = %APPEND% as.xiaojukeji.com, api.m.jd.com, www.52pojie.cn, draw.jdfcloud.com, www.duokan.com, zt.wps.cn, daojia.jd.com, i.meituan.com, *.v2ex.com, *.rr.tv, gameapi.hellobike.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rrys2019.com, ios.zmzapi.com, *.bilibili.com
