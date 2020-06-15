@@ -13,9 +13,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-
 # 哔哩哔哩去广告
 URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
 URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
-# 人人视频去广告
-AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
-URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
 # 爱美剧去广告
 URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/pay/ok$ ,REJECT-TINYGIF
 URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ver/index_ios$,REJECT
