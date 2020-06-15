@@ -8,6 +8,9 @@ lkyl.js = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubuserconte
 lkyl.js = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 
 # 定时签到
+# APK.TW
+http-request ^https://apk.tw\/member.php(.*?)action=login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js,requires-body=true
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js
 # 滴滴出行
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
@@ -50,4 +53,4 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
 
 [MITM]
-hostname = %APPEND% as.xiaojukeji.com, api.m.jd.com, www.52pojie.cn, draw.jdfcloud.com, www.duokan.com, zt.wps.cn, daojia.jd.com, i.meituan.com, *.v2ex.com, *.rr.tv, gameapi.hellobike.com, *.rrys2019.com, ios.zmzapi.com, *.bilibili.com
+hostname = %APPEND% apk.tw, as.xiaojukeji.com, api.m.jd.com, www.52pojie.cn, draw.jdfcloud.com, www.duokan.com, zt.wps.cn, daojia.jd.com, i.meituan.com, *.v2ex.com, *.rr.tv, gameapi.hellobike.com, *.rrys2019.com, ios.zmzapi.com, *.bilibili.com
