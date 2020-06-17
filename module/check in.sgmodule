@@ -3,6 +3,9 @@
 #!system=ios
 
 [Script]
+# 智行火车票
+http-request ^https:\/\/m\.ctrip\.com/restapi/soa2/14593/json/attendanceDay? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.cookie.js, requires-body=true
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.js
 # 滴滴出行
 ron "59 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
 cron "30 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
@@ -73,4 +76,4 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 吾爱获取Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 
 [MITM]
-hostname = %APPEND% as.xiaojukeji.com, *.rr.tv, *.feng.com, m.gdoil.cn, gameapi.hellobike.com, daojia.jd.com, i.meituan.com, music.163.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.smzdm.com, *.v2ex.com, zt.wps.cn, mobwsa.ximalaya.com, *.rrys2019.com, ios.zmzapi.com, www.duokan.com, *.csdn.net, *.bilibili.com, apk.tw, c.tieba.baidu.com, api.m.jd.com, www.52pojie.cn
+hostname = %APPEND% m.ctrip.com, as.xiaojukeji.com, *.rr.tv, *.feng.com, m.gdoil.cn, gameapi.hellobike.com, daojia.jd.com, i.meituan.com, music.163.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.smzdm.com, *.v2ex.com, zt.wps.cn, mobwsa.ximalaya.com, *.rrys2019.com, ios.zmzapi.com, www.duokan.com, *.csdn.net, *.bilibili.com, apk.tw, c.tieba.baidu.com, api.m.jd.com, www.52pojie.cn
