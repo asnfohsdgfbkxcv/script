@@ -3,6 +3,10 @@
 #!system=ios
 
 [Script]
+# 微博每日签到
+每日签到 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,script-update-interval=0
+获取微博Cookie = type=http-request,pattern=https:\/\/api\.weibo\.cn\/\d\/video\/machine\?gsid,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+微博钱包签到Cookie = type=http-request,pattern=https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
 # 智行火车票
 http-request ^https:\/\/m\.ctrip\.com/restapi/soa2/14593/json/attendanceDay? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.cookie.js, requires-body=true
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.js
@@ -76,4 +80,4 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 吾爱获取Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 
 [MITM]
-hostname = %APPEND% m.ctrip.com, as.xiaojukeji.com, *.rr.tv, *.feng.com, m.gdoil.cn, gameapi.hellobike.com, daojia.jd.com, i.meituan.com, music.163.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.smzdm.com, *.v2ex.com, zt.wps.cn, mobwsa.ximalaya.com, *.rrys2019.com, ios.zmzapi.com, www.duokan.com, *.csdn.net, *.bilibili.com, apk.tw, c.tieba.baidu.com, api.m.jd.com, www.52pojie.cn
+hostname = %APPEND% api.weibo.cn, pay.sc.weibo.com, m.ctrip.com, as.xiaojukeji.com, *.rr.tv, *.feng.com, m.gdoil.cn, gameapi.hellobike.com, daojia.jd.com, i.meituan.com, music.163.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.smzdm.com, *.v2ex.com, zt.wps.cn, mobwsa.ximalaya.com, *.rrys2019.com, ios.zmzapi.com, www.duokan.com, *.csdn.net, *.bilibili.com, apk.tw, c.tieba.baidu.com, api.m.jd.com, www.52pojie.cn
