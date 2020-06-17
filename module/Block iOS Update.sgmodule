@@ -1,5 +1,5 @@
-#!name=Block iOS Update
-#!desc=屏蔽IOS升级。
+#!name=屏蔽iOS升级
+#!desc=Block iOS Update
 #!system=ios
 
 [Rule]
