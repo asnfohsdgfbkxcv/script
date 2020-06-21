@@ -14,7 +14,7 @@ https://www.v2ex.com/, https://www.v2ex.com/mission/daily
 http://www.rrys2019.com/
 
 ## 登录APP
-WPS, 喜马拉雅, 哈啰出行, 京东到家, 美团, QQ音乐, 趣头条, 人人视频, 顺丰速运
+WPS, 喜马拉雅, 哈啰出行, 京东到家, 美团, QQ音乐等
 
 # Module 集合
 ## [lhie1 All in One Module](https://api.dler.io/render?path=templates/lhie1_mods.tpl&mod=all)
