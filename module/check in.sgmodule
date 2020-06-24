@@ -11,7 +11,7 @@
 http-request ^https:\/\/m\.ctrip\.com/restapi/soa2/14593/json/attendanceDay? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.cookie.js, requires-body=true
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.js
 # 滴滴出行
-ron "59 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
+cron "59 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
 cron "30 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 # 人人视频
@@ -76,10 +76,10 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 京东到家 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,script-update-interval=0
 获取京东到家 Cookie = type=http-request,pattern=https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
 # jd免费水果、宠物、豆豆
-cron "1 0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/jd/fruit.js,tag=jd免费水果
-cron "1 0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_pet.js,tag=jd宠物
+cron "1 0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/jd/fruit.js
+cron "1 0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_pet.js
 cron "1 0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_joy.js
-cron "1 7-21/2 * * *" script-path=https://github.com/nzw9314/QuantumultX/raw/master/Task/jd_plantBean.js,tag=京东种豆得豆
+cron "1 7-21/2 * * *" script-path=https://github.com/nzw9314/QuantumultX/raw/master/Task/jd_plantBean.js
 #吾爱破解
 吾爱签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 吾爱获取Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
