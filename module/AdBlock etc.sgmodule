@@ -1,4 +1,5 @@
 #!name=AdBlock etc
 #!desc=去广告等
 
-# DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt,REJECT
+[Rule]
+DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt,REJECT
