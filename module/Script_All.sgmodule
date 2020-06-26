@@ -1,6 +1,10 @@
-#!name=Script - All
-#!desc=去掉自己不需要的脚本。
+#!name=Script、AdBlock
+#!desc=脚本、去广告等
 #!system=ios
+
+[Rule]
+DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt,REJECT
+RULE-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block_Add.txt,REJECT
 
 [URL Rewrite]
 # Q-Search
