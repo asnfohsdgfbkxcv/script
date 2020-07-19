@@ -23,8 +23,10 @@ DOMAIN,updates-http.cdn-apple.com,REJECT
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 [Script]
+# 爱美剧 unlock vip（官网：xmj.app）
+http-response ^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js
 # 小小影视
 https:\/\/.*.xiaoxiao(img|apps|appxs).com\/(vod\/reqplay\/|ucp/index|getGlobalData) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/surge/master/Script/xxys.js
 
 [MITM]
-hostname = %APPEND% duckduckgo.com, *.xiaoxiaoimg.com, *.xiaoxiaoapps.com, *.xiaoxiaoappxs.com
+hostname = %APPEND% duckduckgo.com, api.bjxkhc.com, *.xiaoxiaoimg.com, *.xiaoxiaoapps.com, *.xiaoxiaoappxs.com
