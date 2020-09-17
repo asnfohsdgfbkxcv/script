@@ -7,10 +7,6 @@
 DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt,REJECT
 # 阻止广告联盟关键字和IP段
 RULE-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block_Add.txt,REJECT
-# Block iOS Update
-DOMAIN,mesu.apple.com,REJECT
-DOMAIN,gdmf.apple.com,REJECT
-DOMAIN,updates-http.cdn-apple.com,REJECT
 
 [URL Rewrite]
 # Q-Search
