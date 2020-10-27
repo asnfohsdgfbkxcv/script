@@ -69,8 +69,8 @@ Tasks: ithome-签到 = type=cron,cronexp=10 0 * * *,script-path=https://raw.gith
 
 # By passerby-b  Gitee:https://gitee.com/passerby-b/javascript
 # 云闪付
-http-request https://youhui.95516.com/newsign/public/app/index.html script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
-cron "0 9 * * *" script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
+http-request https://youhui.95516.com/newsign/public/app/index.html script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js, requires-body=true, timeout=10, tag=云闪付签到
+cron "0 5 * * *" script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 
 [MITM]
 hostname = %APPEND% youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, api.m.jd.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, daojia.jd.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com
