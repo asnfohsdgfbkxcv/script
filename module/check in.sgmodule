@@ -9,6 +9,9 @@ cron "59 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/m
 cron "30 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 
+# yangtingxiao  GitHub：https://github.com/yangtingxiao/QuantumultX/blob/master/scripts
+京东大赢家 双11活动 = type=cron,cronexp="5 0-22/2 * * *",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_bigWinner.js
+
 # By lxk0301  GitHub：https://github.com/lxk0301/scripts
 # 京东游戏
 京东手机狂欢城 = type=cron,cronexp=1 0-18/6 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js
