@@ -4,7 +4,7 @@
 
 [Rule]
 # 超过4万条广告规则, 阻止常见的APP广告/隐私/行为/数据/流量/劫持的统计和追踪.
-DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt,REJECT
+# DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt,REJECT
 # anti-AD Filters
 # DOMAIN-SET,https://anti-ad.net/surge.txt,REJECT
 # 阻止广告联盟关键字和IP段
