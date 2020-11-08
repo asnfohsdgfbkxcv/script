@@ -6,7 +6,12 @@
 # anti-AD Filters
 DOMAIN-SET,https://anti-ad.net/surge.txt,REJECT
 
+[Header Rewrite]
+# 小小影视 解锁VIP
+https:\/\/.*.(xxjjappss|xxijappss|xjwdapps|xiaoxiao(img|apps|appxs)).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
+
 [URL Rewrite]
+# By Neurogram-R  GitHub：https://github.com/Neurogram-R/Surge/blob/master
 # Q-Search
 ^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
 ^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
@@ -17,10 +22,11 @@ DOMAIN-SET,https://anti-ad.net/surge.txt,REJECT
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 [Script]
+# 小小影视 去广告
+xxysad.js = type=http-response,pattern=https:\/\/.*\/getGlobalData,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/xxysad.js,script-update-interval=0
+
 # 爱美剧 unlock vip（官网：xmj.app）
 http-response ^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js
-# 小小影视
-https:\/\/.*.xiaoxiao(img|apps|appxs).com\/(vod\/reqplay\/|ucp/index|getGlobalData) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/xxys.js
 
 # By yichahucha  GitHub：https://github.com/yichahucha/surge
 jd_price.js = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
@@ -30,4 +36,4 @@ wb_launch.js = type=http-response,requires-body=1,pattern=^https?://(sdk|wb)app\
 wb_ad.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, duckduckgo.com, api.bjxkhc.com, *.xiaoxiaoimg.com, *.xiaoxiaoapps.com, *.xiaoxiaoappxs.com
+hostname = %APPEND% api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, duckduckgo.com, api.bjxkhc.com, *.xiaoxiao*.com,*.xjwdapps.com,*.xxijappss.com, *.xxjjappss.com
