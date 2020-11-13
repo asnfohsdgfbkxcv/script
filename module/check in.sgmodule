@@ -13,7 +13,7 @@
 京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
 京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
 # 京东时光机 = type=cron,cronexp=20 0-20/4 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_timeMachine.js
-京东星店长 = type=cron,cronexp=5 9 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_starStore.js
+# 京东星店长 = type=cron,cronexp=5 9 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_starStore.js
 # 京东大赢家 = type=cron,cronexp=5 0-22/2 * * *,wake-system=1,timeout=500,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_bigWinner.js
 
 # By lxk0301  GitHub：https://github.com/lxk0301/scripts
