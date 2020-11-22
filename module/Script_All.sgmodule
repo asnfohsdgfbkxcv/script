@@ -4,7 +4,7 @@
 
 [Rule]
 # anti-AD Filters
-DOMAIN-SET,https://anti-ad.net/surge.txt,REJECT
+# DOMAIN-SET,https://anti-ad.net/surge.txt,REJECT
 
 [Header Rewrite]
 # 小小影视 解锁VIP
