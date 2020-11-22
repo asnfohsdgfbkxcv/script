@@ -83,6 +83,10 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 # IT之家
 ithome cookie = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
 ithome 签到 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,wake-system=true
+# 顺丰速运
+http-request ^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+http-request ^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+cron "*/10 * * * * *" script-path=scripts/sfexpress.js
 
 # By passerby-b  Gitee:https://gitee.com/passerby-b/javascript
 # 云闪付
@@ -90,4 +94,4 @@ http-request https://youhui.95516.com/newsign/public/app/index.html script-path=
 cron "0 5 * * *" script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 
 [MITM]
-hostname = %APPEND% youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
+hostname = %APPEND% sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
