@@ -3,7 +3,7 @@
 #!system=ios
 
 [Rule]
-DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt,AdBlock
+DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,AdBlock
 
 [Header Rewrite]
 # 小小影视 解锁VIP
