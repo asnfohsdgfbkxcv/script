@@ -2,6 +2,9 @@
 #!desc=脚本、去广告等
 #!system=ios
 
+[Rule]
+DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt,AdBlock
+
 [Header Rewrite]
 # 小小影视 解锁VIP
 https:\/\/.*.(xxjjappss|xxijappss|xjwdapps|xiaoxiao(img|apps|appxs)).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
