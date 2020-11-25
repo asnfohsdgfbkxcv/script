@@ -101,4 +101,4 @@ http-request https://youhui.95516.com/newsign/public/app/index.html script-path=
 cron "0 5 * * *" script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 
 [MITM]
-hostname = %APPEND% sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
+hostname = %APPEND% lkyl.dianpusoft.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
