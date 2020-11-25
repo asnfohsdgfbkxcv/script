@@ -1,5 +1,0 @@
-#!name=域名解析
-#!desc=李哥。
-[MITM]
-skip-server-cert-verify = true
-hostname = %APPEND%, api.gao1gps.cn, api-hdcj.9w9.com, app.api.versa-ai.com, ssl-api.itranslateapp.com, api.rr.tv, mp.weixin.qq.com, api1.dobenge.cn, viva.v21xy.com, *.115.com, api.m.jd.com, *.rr.tv, *.video.qq.com, newdrugs.dxy.cn, ios.prod.ftl.netflix.com
