@@ -5,9 +5,9 @@
 [Script]
 # By zZPigle  GitHub：https://github.com/zZPiglet/Task/tree/master
 # 滴滴出行
-滴滴出行签到1 = type=cron,cronexp=59 23 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
-滴滴出行签到2 = type=cron,cronexp=30 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
-滴滴出行 cookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+滴滴出行 = type=cron,cronexp="0 1,20 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
+滴滴出行APPCookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+滴滴出行小程序Cookie = type=http-request,pattern=^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 
 # yangtingxiao  GitHub：https://github.com/yangtingxiao/QuantumultX/blob/master/scripts
 京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
