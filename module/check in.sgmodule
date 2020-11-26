@@ -3,6 +3,14 @@
 #!system=ios
 
 [Script]
+# By ziye12  GitHub：https://github.com/ziye12/JavaScript
+企鹅读书获取cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/user\/init,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, requires-header=true
+企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid? script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, requires-header=true
+
+# By id77  GitHub：https://github.com/id77/QuantumultX
+伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
+伊利乳品 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js,wake-system=true
+ 
 # By zZPigle  GitHub：https://github.com/zZPiglet/Task/tree/master
 # 滴滴出行
 滴滴出行 = type=cron,cronexp="0 1,20 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
@@ -101,4 +109,4 @@ http-request https://youhui.95516.com/newsign/public/app/index.html script-path=
 cron "0 5 * * *" script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 
 [MITM]
-hostname = %APPEND% lkyl.dianpusoft.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
+hostname = %APPEND% mqqapi.reader.qq.com, club.yili.com, lkyl.dianpusoft.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
