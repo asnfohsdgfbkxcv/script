@@ -61,7 +61,7 @@
 东东工厂 = type=cron,cronexp=0 *\/3 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/dd_factory.js
 
 # By Sunert  GitHub：https://github.com/Sunert/Scripts
-来客有礼 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
+来客有礼 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,script-update-interval=0
 来客有礼 Cookie = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 
 # By NobyDa  GitHub：https://github.com/NobyDa/Script/tree/master
