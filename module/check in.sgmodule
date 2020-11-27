@@ -4,8 +4,6 @@
 
 [Script]
 # By ziye12  GitHub：https://github.com/ziye12/JavaScript
-企鹅读书获取cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/user\/init,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, requires-header=true
-企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid? script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, requires-header=true
 
 # By id77  GitHub：https://github.com/id77/QuantumultX
 伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
@@ -43,8 +41,6 @@
 东东超市兑换奖品 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js
 取关京东店铺商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js
 京豆变动通知 = type=cron,cronexp=2 9 * * *,wake-system=1,timeout=440,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js
-京东手机狂欢城 = type=cron,cronexp=1 0-18/6 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_818.js
-京东星推官 = type=cron,cronexp=2 0 * * *,wake-system=1,timeout=320,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_xtg.js
 京东点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js
 天天提鹅 = type=cron,cronexp="15 14 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_daily_egg.js
 金融养猪 = type=cron,cronexp="12 13 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js
@@ -58,8 +54,6 @@
 东东工厂 = type=cron,cronexp=0 *\/3 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/dd_factory.js
 
 # By Sunert  GitHub：https://github.com/Sunert/Scripts
-来客有礼 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,script-update-interval=0
-来客有礼 Cookie = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 
 # By NobyDa  GitHub：https://github.com/NobyDa/Script/tree/master
 # 京东
@@ -99,10 +93,6 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 # IT之家
 ithome cookie = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
 ithome 签到 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,wake-system=true
-# 顺丰速运
-http-request ^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-http-request ^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-cron "0 5 * * *" script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
 
 # By passerby-b  Gitee:https://gitee.com/passerby-b/javascript
 # 云闪付
@@ -110,4 +100,4 @@ http-request https://youhui.95516.com/newsign/public/app/index.html script-path=
 cron "0 5 * * *" script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 
 [MITM]
-hostname = %APPEND% mqqapi.reader.qq.com, club.yili.com, lkyl.dianpusoft.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
+hostname = %APPEND% club.yili.com, lkyl.dianpusoft.cn, youhui.95516.com, my.ruanmei.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, www.duokan.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
