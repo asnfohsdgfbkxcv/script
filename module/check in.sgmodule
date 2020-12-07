@@ -45,67 +45,47 @@
 
 # By whyour  GitHub： https://github.com/whyour/hundun
 京东赚赚 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js
-京东赚赚cookie = type=http-request,pattern=^https\:\/\/api\.m\.jd\.com\/client\.action\?functionId\=interactIndex,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.cookie.js
+京东赚赚 Cookie = type=http-request,pattern=^https\:\/\/api\.m\.jd\.com\/client\.action\?functionId\=interactIndex,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.cookie.js
 京喜财富岛 = type=cron,cronexp="30 23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/MoPoQAQ/Script/main/Me/jx_cfd.js
 
 # By id77  GitHub：https://github.com/id77/QuantumultX
-伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
 伊利乳品 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js,wake-system=true
+伊利乳品 Cookie = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
  
 # By zZPigle  GitHub：https://github.com/zZPiglet/Task
 滴滴出行 = type=cron,cronexp="0 1,20 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
-滴滴出行APPCookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
-滴滴出行小程序Cookie = type=http-request,pattern=^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+滴滴出行APP Cookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+滴滴出行小程序 Cookie = type=http-request,pattern=^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 
 # By NobyDa  GitHub：https://github.com/NobyDa/Script/tree/master
-# 京东
 京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 京东 Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-# 吾爱破解
 吾爱破解 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 吾爱破解 Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 
 # By chavyleung  GitHub：https://github.com/chavyleung/scripts
-# APK.TW
 APK.TW = type=cron,cronexp=10 0 0 * * *,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js
-APK.TW cookie = type=http-request,pattern=^https://apk.tw\/member.php(.*?)action=login,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js
-
-# 哔哩哔哩
+APK.TW Cookie = type=http-request,pattern=^https://apk.tw\/member.php(.*?)action=login,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js
 哔哩哔哩签到 = type=cron,cronexp="10 0 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js
 哔哩哔哩换硬币 = type=cron,cronexp="10 0 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
 哔哩哔哩 Cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
-
-# 多看阅读
 多看阅读 = type=cron,cronexp="0 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.js
 多看阅读 Cookie = type=http-request,pattern=^https:\/\/www\.duokan\.com\/checkin\/v0\/status,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.cookie.js
-
-# 威锋网
 威锋网 = type=cron,cronexp="10 0 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.js
 威锋网 Cookie = type=http-request,pattern=^https:\/\/(www\.)?feng\.com\/?.?,script-pathhttps://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js
-
-# 哈啰出行
 哈啰出行 = type=cron,cronexp=5 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js
 哈啰出行 Cookie = type=http-request,pattern=^https:\/\/gameapi\.hellobike\.com\/api,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js
-
-# 京东到家
 京东到家 = type=cron,cronexp="10 0 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js
 京东到家 Cookie = type=http-request,pattern=^https:\/\/daojia.jd.com/client(.*?)functionId=signin(.*?)userSigninNew,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.cookie.js
-
-# V2EX
 V2EX = type=cron,cronexp="10 0 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
 V2EX Cookie = type=http-request,pattern=^https:\/\/www\.v2ex\.com\/mission\/daily,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
-
-# 字幕组
 字幕组 = type=cron,cronexp="10 0 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js
 字幕组 Cookie 1 = type=http-request,pattern=^https?:\/\/(www\.)?rrys2020\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
 字幕组 Cookie 2 = type=http-request,pattern=^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
-
-# IT之家
-ithome 签到 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,wake-system=true
-ithome cookie = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
+IT之家 签到 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,wake-system=true
+IT之家 Cookie = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
 
 # By passerby-b  Gitee:https://gitee.com/passerby-b/javascript
-# 云闪付
 云闪付 = type=cron,cronexp=0 5 * * *,wake-system=1,timeout=20,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 云闪付 Cookie = type=http-request,pattern=https://youhui.95516.com/newsign/public/app/index.html,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 
