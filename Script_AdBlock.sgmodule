@@ -6,18 +6,6 @@
 DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,AdBlock
 
 [URL Rewrite]
-# 知乎网页版优化
-# 以下规则仅对手机网页版有效，如使用APP 请勿添加
-# 先重写到桌面版
-^https:\/\/www\.zhihu\.com\/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Windows Phone 10)$2
-# 再注入 CSS 进行优化
-^https:\/\/www\.zhihu\.com\/question url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
-# 去掉知乎跳转第三方网站的中间页面。可选，记得加 mitmhost：link.zhihu.com
-^https?://link\.zhihu\.com/\?target=(https?)%3A//(.*) url 307 $1://$2
-# 可选。知乎专栏底部推荐阅读文章直接打开，免跳转应用商店。mitmhost：oia.zhihu.com
-^https:\/\/oia\.zhihu\.com\/answers\/([0-9]+)\?.* url 307 https://www.zhihu.com/answer/$1
-^https:\/\/oia\.zhihu\.com\/articles\/([0-9]+)\?.* url 307 https://zhuanlan.zhihu.com/p/$1
-
 # By Neurogram-R  GitHub：https://github.com/Neurogram-R/Surge/blob/master
 # Q-Search
 ^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
@@ -37,4 +25,4 @@ DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/ma
 微博去广告 = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 
 [MITM]
-hostname = %APPEND% oia.zhihu.com, link.zhihu.com, www.zhihu.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, duckduckgo.com
+hostname = %APPEND% api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, duckduckgo.com
