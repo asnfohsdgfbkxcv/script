@@ -17,6 +17,8 @@ DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/ma
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 [Script]
+# By Hackl0us  GitHub：https://github.com/Hackl0us/SS-Rule-Snippet 
+AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-_]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Scripts/Surge/iOS_Weather_AQI_Standard.js, script-update-interval=86400
 # By yichahucha  GitHub：https://github.com/yichahucha/surge
 京东价格 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 淘宝价格1 = type=http-request,requires-body=1,pattern=^http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
@@ -25,4 +27,4 @@ DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/ma
 微博去广告 = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, duckduckgo.com
+hostname = %APPEND% weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, duckduckgo.com
