@@ -18,7 +18,7 @@ DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/ma
 
 [Script]
 # By Hackl0us  GitHub：https://github.com/Hackl0us/SS-Rule-Snippet 
-AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/iOS_Weather_AQI_Standard.js
+AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?, requires-body=true, script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/iOS_Weather_AQI_Standard.js
 # By yichahucha  GitHub：https://github.com/yichahucha/surge
 京东价格 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 淘宝价格1 = type=http-request,requires-body=1,pattern=^http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
