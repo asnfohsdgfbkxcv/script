@@ -121,5 +121,9 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 # By Sunert  GitHub：https://github.com/Sunert/Scripts
 # By ziye12  GitHub：https://github.com/ziye12/JavaScript
 
+# 待整理
+# 获取多个京东cookie = type=http-request,pattern=^https:\/\/wq\.jd\.com\/user_new\/info\/GetJDUserInfoUnion,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/JD_extra_cookie.js,script-update-interval=0
+
+
 [MITM]
-hostname = %APPEND% *.acfun.cn, club.yili.com, lkyl.dianpusoft.cn, youhui.95516.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
+hostname = %APPEND% wq.jd.com, *.acfun.cn, club.yili.com, lkyl.dianpusoft.cn, youhui.95516.com, as.xiaojukeji.com, www.52pojie.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
