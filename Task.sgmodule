@@ -2,10 +2,22 @@
 #!desc=签到、去广告、脚本
 #!system=ios
 
+# README.md
+# 感谢id77、Neurogram-R、Hackl0us、elecV2、yichahucha、等GayHub guys
+
 [Rule]
 DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,AdBlock
 
+[Header Rewrite]
+# 知乎网页显示优化
+^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
+
 [URL Rewrite]
+# 皮皮虾去广告
+app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
+# 知乎网页显示优化
+^https?://link\.zhihu\.com/\?target=https?%3A//(.*) https://$1 302
+^https?://oia\.zhihu\.com https://zhuanlan.zhihu.com 302
 # By Neurogram-R  GitHub：https://github.com/Neurogram-R/Surge/blob/master
 # Q-Search
 ^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
@@ -19,42 +31,45 @@ DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/ma
 [Script]
 # 非签到脚本
 AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?, requires-body=true, script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/iOS_Weather_AQI_Standard.js
+知乎网页显示优化 = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/question,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
 京东价格 = type=http-response,requires-body=1,pattern=https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 淘宝价格1 = type=http-request,requires-body=1,pattern=http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 淘宝价格2 = type=http-response,requires-body=1,pattern=https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 微博去广告-启动页 = type=http-response,requires-body=1,pattern=https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
 微博去广告 = type=http-response,requires-body=1,max-size=-1,pattern=https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 BoxJs = type=http-request,pattern=https?://boxjs.com,script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
-# By id77  GitHub：https://github.com/id77/QuantumultX
+皮皮虾去广告 = type=http-response,requires-body=1,max-size=-1,pattern=https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list),script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js
+
+# 签到脚本
 伊利乳品 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js,wake-system=true
-伊利乳品 Cookie = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
+伊利乳品Cookie = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
  # By zZPigle  GitHub：https://github.com/zZPiglet/Task
 滴滴出行 = type=cron,cronexp="0 1,20 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
-滴滴出行 APP Cookie = type=http-request,pattern=https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
-滴滴出行小程序 Cookie = type=http-request,pattern=https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+滴滴出行APP Cookie = type=http-request,pattern=https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+滴滴出行小程序Cookie = type=http-request,pattern=https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 # By NobyDa  GitHub：https://github.com/NobyDa/Script/tree/master
 吾爱签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
-吾爱获取 Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+吾爱获取Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 # AcFun
-AcFun 签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js
+AcFun签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js
 AcFun Cookie = type=http-request,pattern=https:\/\/api\-new\.app\.acfun\.cn\/rest\/app\/user\/personalInfo,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.cookie.js
-APK.TW 签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js
+APK.TW签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js
 APK.TW Cookie = type=http-request,pattern=https://apk.tw\/member.php(.*?)action=login,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js,requires-body=true
 哔哩哔哩签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js
 哔哩哔哩换硬币 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
-哔哩哔哩 Cookie = type=http-request,pattern=https:\/\/(www|live)\.bilibili\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
+哔哩哔哩Cookie = type=http-request,pattern=https:\/\/(www|live)\.bilibili\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
 威锋网签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.js
-威锋网 Cookie = type=http-request,pattern=https:\/\/(www\.)?feng\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js
+威锋网Cookie = type=http-request,pattern=https:\/\/(www\.)?feng\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js
 哈啰出行签到 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js
 哈啰出行 Cookie = type=http-request,pattern=https:\/\/gameapi\.hellobike\.com\/api,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js, requires-body=true
-V2EX 签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
+V2EX签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
 V2EX Cookie = type=http-request,pattern=https:\/\/www\.v2ex\.com\/mission\/daily,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
 字幕组签到 = type=cron,cronexp=10 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js
-字幕组 Cookie 1 = type=http-request,pattern=https?:\/\/(www\.)?rrys2020\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
-字幕组 Cookie 2 = type=http-request,pattern=http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
+字幕组Cookie 1 = type=http-request,pattern=https?:\/\/(www\.)?rrys2020\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
+字幕组Cookie 2 = type=http-request,pattern=http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
 # By passerby-b  Gitee:https://gitee.com/passerby-b/javascript
 云闪付签到 = type=cron,cronexp=0 7 * * *,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
-云闪付 Cookie = type=http-request,pattern=https://youhui.95516.com/newsign/api/coin_details,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js, requires-body=true, timeout=10
+云闪付Cookie = type=http-request,pattern=https://youhui.95516.com/newsign/api/coin_details,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js, requires-body=true, timeout=10
 
 [MITM]
-hostname = %APPEND% duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, youhui.95516.com
+hostname = %APPEND% duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, *.rrys2020.com, ios.zmzapi.com, youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
