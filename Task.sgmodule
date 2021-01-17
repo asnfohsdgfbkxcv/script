@@ -6,7 +6,7 @@
 # 感谢Neurogram-R、Hackl0us、elecV2、yichahucha、chavyleung、Liquor030、id77、zZPigle、NobyDa、passerby-b等GayHub guys
 
 [Rule]
-DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,AdBlock
+DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt,REJECT
 
 [Header Rewrite]
 # 知乎网页显示优化
