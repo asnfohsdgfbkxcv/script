@@ -1,4 +1,4 @@
-#!name=Task JD
+#!name=Task JD Module
 #!desc=京东脚本
 #!system=ios
 
@@ -6,14 +6,14 @@
 # 感谢LXK9301、shylocks、whyour、yangtingxiao等GayHub guys
 
 [Script]
-# 功能性脚本，不定时执行
+# 功能性脚本
 # 取关京东店铺和商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=250,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unsubscribe.js
 # 获取互助码 = type=cron,cronexp="20 13 * * 6",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_get_share_code.js
 # 注销京东会员卡 = type=cron,cronexp="20 12 * * 6",wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js
 获取京东 Cookie by 2Ya = type=http-request,pattern=^https:\/\/wq\.jd\.com\/user_new\/info\/GetJDUserInfoUnion,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/JD_extra_cookie.js
 京豆变动通知 = type=cron,cronexp="2 9 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_bean_change.js
 
-# 签到脚本
+# 签到、活动脚本
 京东多合一签到 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 京东多合一Cookie by NobyDa = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 东东农场 = type=cron,cronexp="40 8-18/5 * * *",wake-system=1,timeout=530,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js
