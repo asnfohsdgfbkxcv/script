@@ -67,13 +67,17 @@ CrazyJoy 任务 = type=cron,cronexp="30 8 * * *",wake-system=1,timeout=1750,scri
 
 # 临时活动
 # 活动结束时间未知
-京东炸年兽 = type=cron,cronexp="0 8,9,10 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian.js
-京东炸年兽-收集爆竹 = type=cron,cronexp="20 * * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nianCollect.js
+个护爱消除 = type=cron,cronexp="40 * * * *",wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl_gh.js
 京东直播 = type=cron,cronexp="10-20/5 12 * * *",wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_live.js
 宝洁美发屋 = type=cron,cronexp="1 8,9 14-31/1 1 *",wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_bj.js
 超级直播间红包雨 = type=cron,cronexp="30,31 20-23/1 5 1 *",wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain.js
 # 2021年1月9日-2021年2月9日
 京东年货节 = type=cron,cronexp="0 8 * * *",wake-system=1,timeout=2220,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nh.js
+# 2021年1月11日至2021年1月20日
+京年团圆pick = type=cron,cronexp="5 0 19,20 1 *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_vote.js
+# 2021-1-18至2021-2-11
+京东炸年兽 = type=cron,cronexp="0 8,9,10 * * *",wake-system=1,timeout=222000,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian.js
+京东炸年兽-收集爆竹 = type=cron,cronexp="20 * * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nianCollect.js
 
 [MITM]
 hostname = %APPEND% wq.jd.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
