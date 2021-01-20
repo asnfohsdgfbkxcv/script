@@ -75,9 +75,17 @@ CrazyJoy 任务 = type=cron,cronexp="30 8 * * *",wake-system=1,timeout=1750,scri
 京东年货节 = type=cron,cronexp="0 8 * * *",wake-system=1,timeout=2220,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nh.js
 # 2021年1月11日至2021年1月20日
 京年团圆pick = type=cron,cronexp="5 0 19,20 1 *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_vote.js
+# 2021-1-20至2021-2-5
+京东神仙书院 = type=cron,cronexp="0 8 * * *",wake-system=1,timeout=2000,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_immortal.js
 # 2021-1-18至2021-2-11
 京东炸年兽 = type=cron,cronexp="0 8,9,10 * * *",wake-system=1,timeout=222000,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian.js
 京东炸年兽-收集爆竹 = type=cron,cronexp="20 * * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nianCollect.js
+# 2021年1月20日-2021年2月5日每天12~23每个半点
+半点红包雨 = type=cron,cronexp="30,31 12-23/1 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js
+# 2021年1月20日-2021年2月5日每天0,9,11,13,15,17,19,20,21,23点可领
+官方号直播红包雨 = type=cron,cronexp="0 0,9,11,13,15,17,19,20,21,23 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js
+# 2021年1月20日-2021年1月30日、2月3日、2月5日每天0,9,11,13,15,17,19,20,21,23点可领
+年货直播红包雨 = type=cron,cronexp="0 0,9,11,13,15,17,19,20,21,23 3,5,20-30/1 1,2 *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_nian.js
 
 [MITM]
 hostname = %APPEND% wq.jd.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
