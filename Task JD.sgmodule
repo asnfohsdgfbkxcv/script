@@ -67,7 +67,7 @@ CrazyJoy 任务 = type=cron,cronexp="30 8 * * *",wake-system=1,timeout=1750,scri
 
 # 临时活动
 # 活动结束时间未知
-集鞭炮赢京豆 = type=cron,cronexp="10 8,21 * * *",wake-system=1,timeout=2220,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_firecrackers.js
+集鞭炮赢京豆 = type=cron,cronexp="10 8,21 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_firecrackers.js
 个护爱消除 = type=cron,cronexp="40 * * * *",wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl_gh.js
 京东直播 = type=cron,cronexp="10-20/5 12 * * *",wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_live.js
 宝洁美发屋 = type=cron,cronexp="1 8,9 14-31/1 1 *",wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_bj.js
@@ -79,8 +79,11 @@ CrazyJoy 任务 = type=cron,cronexp="30 8 * * *",wake-system=1,timeout=1750,scri
 # 2021-1-20至2021-2-5
 京东神仙书院 = type=cron,cronexp="0 8 * * *",wake-system=1,timeout=3000,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_immortal.js
 # 2021-1-18至2021-2-11
-京东炸年兽 = type=cron,cronexp="0 8,9,10 * * *",wake-system=1,timeout=222000,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian.js
-京东炸年兽-收集爆竹 = type=cron,cronexp="20 * * * *",wake-system=1,timeout=300,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nianCollect.js
+京东炸年兽🧨 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian.js
+京东收🧨 = type=cron,cronexp="50 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nianCollect.js
+京东炸年兽AR = type=cron,cronexp="0 9 * * *",wake-system=1,timeout=36000,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian_ar.js
+京东炸年兽签到任务🧨 = type=cron,cronexp="30 8 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian_sign.js
+京东炸年兽小程序🧨 = type=cron,cronexp="50 8 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian_wechat.js
 # 2021年1月20日-2021年2月5日每天12~23每个半点
 半点红包雨 = type=cron,cronexp="30,31 12-23/1 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js
 # 2021年1月20日-2021年2月5日每天0,9,11,13,15,17,19,20,21,23点可领
