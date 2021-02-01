@@ -68,6 +68,8 @@ CrazyJoy 任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scri
 京东直播 = type=cron,cronexp="10-20/5 12 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_live.js
 # 2021-2-1至2021-2-11
 京东压岁钱 = type=cron,cronexp="20 8,12 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney.js
+# 2021-2-1至2021-2-10
+京东压岁钱抢百元卡 = type=cron,cronexp="0 0 9,12,16,20 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney_lottery.js
 # 2021年1月28日～2021年2月28日
 小鸽有礼2 = type=cron,cronexp="30 7 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xgyl.js
 # 2021-1-30至2021-2-4
