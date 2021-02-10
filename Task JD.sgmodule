@@ -73,6 +73,8 @@ CrazyJoy 任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scri
 京东年货节 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nh.js
 # 2021-02-02 至 2021-02-22
 环球挑战赛 = type=cron,cronexp="0 9,12,20,21 2-22 2 *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_global.js
+# 2021-01-15至2021-02-15
+京东国际盲盒 = type=cron,cronexp="0 9,12,20,21 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_global_mh.js
 
 [MITM]
 hostname = %APPEND% wq.jd.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
