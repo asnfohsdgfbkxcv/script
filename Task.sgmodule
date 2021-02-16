@@ -30,8 +30,6 @@ app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 
 [Script]
 # 非签到脚本
-抖音去广告&水印req = type=http-request,pattern=^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
-抖音去广告&水印res = type=http-response,pattern=^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
 TF解除区域限制 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 Emby Premiere Unlock = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/rartv/SurgeScript/main/EmbyPremiere/EmbyPremiere.js
 AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?, requires-body=true, script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/iOS_Weather_AQI_Standard.js
@@ -39,6 +37,11 @@ AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[
 京东价格 = type=http-response,requires-body=1,pattern=https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 淘宝价格 1 = type=http-request,requires-body=1,pattern=http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 淘宝价格 2 = type=http-response,requires-body=1,pattern=https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+# 去广告
+# 如果您是 YouTube Premium，请不要开启此模块。
+YTB跳过片头广告 = type=http-request,pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://choler.github.io/Surge/Script/YouTube.js
+抖音去广告&水印req = type=http-request,pattern=^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
+抖音去广告&水印res = type=http-response,pattern=^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
 微博去广告-启动页 = type=http-response,requires-body=1,pattern=https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
 微博去广告 = type=http-response,requires-body=1,max-size=-1,pattern=https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 BoxJs = type=http-request,pattern=https?://boxjs.com,script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
@@ -69,4 +72,4 @@ V2EX Cookie = type=http-request,pattern=https:\/\/www\.v2ex\.com\/mission\/daily
 云闪付 Cookie = type=http-request,pattern=https://youhui.95516.com/newsign/api/coin_details,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js, requires-body=true, timeout=10
 
 [MITM]
-hostname = %APPEND% *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com,  youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
+hostname = %APPEND% *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com,  youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
