@@ -3,15 +3,15 @@
 # DOMAIN-SET,https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/ios update blocklist.txt,REJECT
 
 appldnld.apple.com
+appldnld.apple.com.akadns.net
 gdmf.apple.com
+gdmf.apple.com.akadns.net
 mesu.apple.com
+mesu.g.aaplimg.com
+mesu-cdn.apple.com.akadns.net
+mesu-cdn.origin-apple.com.akadns.net
 ocsp.apple.com
 ocsp.int-x3.letsencrypt.org
 swscan.apple.com
 world-gen.g.aaplimg.com
 xp.apple.com
-gdmf.apple.com.akadns.net
-mesu-cdn.apple.com.akadns.net
-mesu-cdn.origin-apple.com.akadns.net
-mesu.g.aaplimg.com
-appldnld.apple.com.akadns.net
