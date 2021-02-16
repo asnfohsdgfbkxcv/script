@@ -1,4 +1,4 @@
 # script
 surge ios addons.
 
-See U Later.
+see you later.
