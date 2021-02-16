@@ -3,5 +3,4 @@
 #!system=ios
 
 [Rule]
-DOMAIN-SET,https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/ios update blocklist.txt,REJECT
-
+DOMAIN-SET,https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/ios-update-blocklist.txt,REJECT
