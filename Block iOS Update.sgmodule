@@ -1,5 +1,5 @@
 #!name=Block iOS Update
-#!desc=屏蔽 iOS 系统更新
+#!desc=屏蔽 AppStore、iOS 更新
 #!system=ios
 
 [Rule]
