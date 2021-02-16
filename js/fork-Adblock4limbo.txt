@@ -1,0 +1,82 @@
+# limbopro.xyz
+# 12.08.2020
+# For surge
+# DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT
+
+# Jable.tv av 吃到饱
+asewlfjqwlflkew.com
+uus52.com
+uus58.com
+ddmax20.xyz
+ads.exosrv.com
+tyrantdb.com
+adserve.work
+
+# nfmovies.com 奈菲影视
+s96.cnzz.com
+yabo729.com
+
+# m.pianku.me 手机片库网
+xn--3bs795g.zone
+xn--2qux23c9ziyrq.plus
+xn--2qux23c9ziyrq.club
+xn--xhq9mt12cf5v.xn--io0a7i
+ddmax20.xyz
+www.avple.video
+xn--3bs795g.link
+
+# netflav.com Netflav
+ad.pornimg.xyz
+yandex.ru
+awaitcola.com
+jsdelivr.net
+wine-api.net
+exosrv.com
+juicyads.com
+wixstatic.com
+thumb.fvs.io
+itnuzleafan.com
+oawhaursaith.com
+unreshiramor.com
+
+# avgle.me 看毛片
+jads.co
+adxadserv.com
+moatads.com
+juicyads.in
+dtscout.com
+
+# dilili.tv
+51.la
+51daeka.com
+
+# pornhub
+trafficjunky.com
+
+# xvideos
+
+# ja.nyahentai.com
+adserver.juicyads.com
+poweredby.jads.co
+jads.co
+
+# www.cocomanhua.com
+exdynsrv.com
+cloudfront.net
+d227cncaprzd7y.cloudfront.net
+d10lumateci472.cloudfront.net
+
+# www.mfkhm.com
+new.xiongzhangad.com
+
+## m.yhdm.io
+dvzk66.cn
+pu0glv.cn
+
+# www.porntrex.com/
+ads.bullionyield.com
+
+# https://www.zhenbuka.com
+2785.dlads.cn
+dagonghuzhu.com
+byteimg.com
