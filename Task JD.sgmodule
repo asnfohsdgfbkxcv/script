@@ -63,6 +63,8 @@ CrazyJoy 任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scri
 # 临时活动
 # 活动结束时间未知
 京东直播 = type=cron,cronexp="10-20/5 12 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_live.js
+# 2021-2-19至2021-2-25
+女装盲盒 = type=cron,cronexp="0 7 19-25 2 *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nzmh.js
 # 2021年1月28日～2021年2月28日
 小鸽有礼2 = type=cron,cronexp="30 7 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xgyl.js
 # 2021-02-02 至 2021-02-22
