@@ -9,7 +9,7 @@
 # 功能性脚本
 # 取关京东店铺和商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
 # 获取互助码 = type=cron,cronexp="20 13 * * 6",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_get_share_code.js
-# 获取京东 Cookie by 2Ya = type=http-request,pattern=^https:\/\/wq\.jd\.com\/user_new\/info\/GetJDUserInfoUnion,requires-body=1,max-size=0,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/JD_extra_cookie.js
+# 获取京东 Cookie by 2Ya = type=http-request,pattern=^https:\/\/me-api\.jd\.com\/user_new\/info\/GetJDUserInfoUnion,requires-body=1,max-size=0,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/JD_extra_cookie.js
 京豆变动通知 = type=cron,cronexp="2 9 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_bean_change.js
 
 # 签到、活动脚本
@@ -79,4 +79,4 @@ CrazyJoy 任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scri
 京东极速版红包 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_speed_redpocke.js
 
 [MITM]
-hostname = %APPEND% wq.jd.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com, m.jingxi.com
+hostname = %APPEND% me-api.jd.com, wq.jd.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com, m.jingxi.com
