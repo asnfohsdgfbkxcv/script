@@ -7,11 +7,11 @@
 
 [Rule]
 # anti-AD Filters
-DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt,REJECT
+# DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt,REJECT
 # SpotifyBlocklist
-DOMAIN-SET,https://raw.githubusercontent.com/x0uid/SpotifyAdBlock/master/SpotifyBlocklist.txt,REJECT
+# DOMAIN-SET,https://raw.githubusercontent.com/x0uid/SpotifyAdBlock/master/SpotifyBlocklist.txt,REJECT
 # Adblock4limbo
-DOMAIN-SET,https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/fork-Adblock4limbo.txt,REJECT
+# DOMAIN-SET,https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/fork-Adblock4limbo.txt,REJECT
 
 [Header Rewrite]
 # 知乎网页显示优化
