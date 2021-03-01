@@ -34,8 +34,6 @@
 进店领豆 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_shop.js
 京东全民开红包 = type=cron,cronexp=1 1 * * *,wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_redPacket.js
 点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_necklace.js
-京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_dreamFactory.js
-京喜工厂plus = type=cron,cronexp="0 1,18 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js
 东东工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jdfactory.js
 京东小窝 = type=cron,cronexp=0 9 * * *,timeout=3600,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/ddxw.js
 十元街 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_syj.js
@@ -55,19 +53,21 @@ CrazyJoy 任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scri
 京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=750,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
 京东到家签到 = type=cron,cronexp="10 0 * * *",,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js
 京东到家 Cookie = type=http-request,pattern=https:\/\/daojia.jd.com/client(.*?)functionId=signin(.*?)userSigninNew,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.cookie.js
-京喜签到 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jx_sign.js
-京喜农场 = type=cron,cronexp="0 9,12,18 * * *",timeout=3600,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
-京喜农场cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京东赚京东开团 = type=cron,cronexp=10 * * * *,timeout=600,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_zjd_tuan.js
 半自动领京豆 = type=cron,cronexp=30 18 * * *,timeout=600,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_zjd.js
 京东极速版 = type=cron,cronexp="0 7 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_speed_sign.js
+京喜签到 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jx_sign.js
+京喜农场 = type=cron,cronexp="0 9,12,18 * * *",timeout=3600,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
+京喜农场cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京喜农场 获取tokens = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
+京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_dreamFactory.js
+京喜工厂plus = type=cron,cronexp="0 1,18 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js
 京喜工厂 获取tokens = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京喜财富岛 获取tokens = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
-京东手机狂欢城 = type=cron,cronexp=0 0-18/6 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_818.js
 京喜财富岛 = type=cron,cronexp="30 8,13,19 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_cfd.js
 
 # 临时活动
+京东手机狂欢城 = type=cron,cronexp=0 0-18/6 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_818.js
 京东国际盲盒 = type=cron,cronexp="0 9,12,20,21 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global_mh.js
 女装盲盒 = type=cron,cronexp="0 8 1-8/1,27,28 2,3 *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_nzmh.js
 # 2021年1月28日～2021年2月28日
@@ -76,6 +76,7 @@ CrazyJoy 任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scri
 环球挑战赛 = type=cron,cronexp="0 9,12,20,21 2-22 2 *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global.js
 # 2021-2-14至2021-3-3
 京东极速版红包 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_speed_redpocke.js
+她的节享京豆 = type=cron,cronexp="0 8,21 1-8/1 3 *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_firecrackers.js
 
 [MITM]
 hostname = %APPEND% me-api.jd.com, wq.jd.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com, m.jingxi.com
