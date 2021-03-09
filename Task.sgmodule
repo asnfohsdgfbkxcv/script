@@ -5,14 +5,6 @@
 # README.md
 # 感谢 Neurogram-R、Hackl0us、elecV2、yichahucha、chavyleung、Liquor030、id77、zZPigle、NobyDa、passerby-b、rartv 等 GayHub guys
 
-[Rule]
-# anti-AD Filters
-# DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt,REJECT
-# SpotifyBlocklist
-# DOMAIN-SET,https://raw.githubusercontent.com/x0uid/SpotifyAdBlock/master/SpotifyBlocklist.txt,REJECT
-# Adblock4limbo
-# DOMAIN-SET,https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/fork-Adblock4limbo.txt,REJECT
-
 [Header Rewrite]
 # 知乎网页显示优化
 ^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
@@ -40,7 +32,7 @@ Emby Premiere Unlock = type=http-response,pattern=^https?:\/\/mb3admin.com\/admi
 AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?, requires-body=true, script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/iOS_Weather_AQI_Standard.js
 知乎网页显示优化 = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/question,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
 京东价格 = type=http-response,requires-body=1,pattern=https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
-淘宝价格 1 = type=http-request,requires-body=1,pattern=http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+淘宝价格 1 = type=http-request,requires-body=1,pattern=http?://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 淘宝价格 2 = type=http-response,requires-body=1,pattern=https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 # 去广告
 # 如果您是 YouTube Premium，请不要开启此模块。
@@ -74,7 +66,7 @@ APK.TW Cookie = type=http-request,pattern=https://apk.tw\/member.php(.*?)action=
 V2EX 签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
 V2EX Cookie = type=http-request,pattern=https:\/\/www\.v2ex\.com\/mission\/daily,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
 云闪付签到 = type=cron,cronexp=0 7 * * *,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
-云闪付 Cookie = type=http-request,pattern=https://youhui.95516.com/newsign/api/coin_details,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js, requires-body=true, timeout=10
+云闪付 Cookie = type=http-request,pattern=https?://youhui.95516.com/newsign/api/coin_details,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js, requires-body=true, timeout=10
 
 [MITM]
-hostname = %APPEND% *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com,  youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
+hostname = %APPEND% *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
