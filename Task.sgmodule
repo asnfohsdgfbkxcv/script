@@ -17,7 +17,7 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/
 
 [URL Rewrite]
 # 高德地图去启动页广告
-^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
+^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ reject
 # 皮皮虾去广告
 app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 # 知乎网页显示优化
