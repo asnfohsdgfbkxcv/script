@@ -16,6 +16,8 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/a
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Advertising/Advertising_Domain.list,REJECT
 
 [URL Rewrite]
+# 高德地图去启动页广告
+^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 # 皮皮虾去广告
 app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 # 知乎网页显示优化
@@ -75,4 +77,4 @@ V2EX Cookie = type=http-request,pattern=https:\/\/www\.v2ex\.com\/mission\/daily
 云闪付 Cookie = type=http-request,pattern=https?://youhui.95516.com/newsign/api/coin_details,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js, requires-body=true, timeout=10
 
 [MITM]
-hostname = %APPEND% *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
+hostname = %APPEND% m*.amap.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
