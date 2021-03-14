@@ -1,5 +1,5 @@
 # iOS Update Blocklist
-# 更新日期：2021年2月16日11点13分
+# 更新日期：2021年3月14日11点16分
 # DOMAIN-SET,https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/ios-update-blocklist.txt,REJECT
 
 appldnld.apple.com
@@ -13,5 +13,6 @@ mesu-cdn.origin-apple.com.akadns.net
 ocsp.apple.com
 ocsp.int-x3.letsencrypt.org
 swscan.apple.com
+updates-http.cdn-apple.com
 world-gen.g.aaplimg.com
 xp.apple.com
