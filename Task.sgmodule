@@ -16,8 +16,13 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/a
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Advertising/Advertising_Domain.list,REJECT
 
 [URL Rewrite]
+# 百度地图去启动页广告
+^https?:\/\/.+\/client\/phpui2\/ - reject
+^https?:\/\/ss0\.bdstatic\.com/.+_\d{3}_\d{4}\.jpg - reject
+# 飞猪去启动页广告
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ - reject
 # 高德地图去启动页广告
-^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ reject
+^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 # 皮皮虾去广告
 app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 # 知乎网页显示优化
