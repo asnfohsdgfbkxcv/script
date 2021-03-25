@@ -7,7 +7,7 @@
 
 [URL Rewrite]
 # 取消绑定京东店铺会员，点击会员卡直达注销页面 
-^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).*url=https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1 302
+^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* url https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1
 
 [Script]
 # 功能性脚本
