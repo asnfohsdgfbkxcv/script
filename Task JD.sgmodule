@@ -5,9 +5,9 @@
 # README.md
 # 感谢 LXK9301、shylocks、whyour、yangtingxiao、anker1209 等 GayHub guys
 
-[url rewrite]
+[URL Rewrite]
 # 取消绑定京东店铺会员，点击会员卡直达注销页面 
-^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* url 302 https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1
+^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).*url=https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1 302
 
 [Script]
 # 功能性脚本
