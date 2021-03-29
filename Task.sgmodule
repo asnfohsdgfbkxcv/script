@@ -80,6 +80,8 @@ V2EX 签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubuserc
 V2EX Cookie = type=http-request,pattern=https:\/\/www\.v2ex\.com\/mission\/daily,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
 云闪付签到 = type=cron,cronexp=0 7 * * *,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 云闪付 Cookie = type=http-request,pattern=https?://youhui.95516.com/newsign/api/coin_details,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js, requires-body=true, timeout=10
+Rewrite: CUCC = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+Rewrite: CUCC = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 
 [MITM]
-hostname = %APPEND% m*.amap.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
+hostname = %APPEND% act.10010.com, m.client.10010.com, *.amap.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, amdc.m.taobao.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, *.feng.com, gameapi.hellobike.com, *.v2ex.com, youhui.95516.com, www.zhihu.com, link.zhihu.com, oia.zhihu.com, *.snssdk.com
