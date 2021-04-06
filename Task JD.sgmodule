@@ -94,6 +94,7 @@ CrazyJoy 任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scri
 京东超市-大转盘 = type=cron,cronexp="3 10 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_marketLottery.js
 母婴-跳一跳 = type=cron,cronexp="5 8,14,20 25-31 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js
 加购有礼 = type=cron,cronexp="15 12 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js
+创维408下班全勤奖 = type=cron,cronexp="15 08 2-18 4 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth.js
 
 ## ZhiYi-N https://github.com/ZhiYi-N/script
 京喜工厂电力收取 = type=http-request,pattern=https://m.jingxi.com/dreamfactory/generator/CollectCurrentElectricity?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/jxcollect.js
