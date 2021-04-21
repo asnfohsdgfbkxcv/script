@@ -23,7 +23,7 @@
 宠汪汪助力更新Token = type=http-response,pattern=^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/addUser\?code=, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_joy_run.js
 宠汪汪助力获取Token = type=http-request,pattern=^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detail\?openId=, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_joy_run.js
 宠汪汪偷好友积分与狗粮 = type=cron,cronexp="0 0-10/2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_joy_steal.js
-天天加速 = type=cron,cronexp="8 0-23/3 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_speed.js
+# 天天加速 = type=cron,cronexp="8 0-23/3 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_speed.js
 京东摇钱树 = type=cron,cronexp="3 0-23/2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_moneyTree.js
 摇京豆 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_club_lottery.js
 东东超市 = type=cron,cronexp="11 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_superMarket.js
@@ -64,7 +64,7 @@ CrazyJoy 任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scri
 环球挑战赛 = type=cron,cronexp="0 9 8-31 3 *",wake-system=1,timeout=3600,script-path= https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_global.js
 她的节享京豆 = type=cron,cronexp="0 8,21 1-8/1 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_firecrackers.js
 超级直播间红包雨 = type=cron,cronexp="30,31 20-23/1 9,12 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_live_redrain.js
-京东手机狂欢城 = type=cron,cronexp=0 0-18/6 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/z_carnivalcity.js
+# 京东手机狂欢城 = type=cron,cronexp=0 0-18/6 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/z_carnivalcity.js
 整点京豆雨 = type=cron,cronexp="1 0-23/1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_super_redrain.js
 赚京豆 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/jd_syj_new.js
 京东小魔方 = type=cron,cronexp="10 10 7-9 4 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/AutoSyncScript/lxk0301/z_xmf.js
