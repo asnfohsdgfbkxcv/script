@@ -3,7 +3,7 @@
 #!system=ios
 
 # README.md
-# 感谢 Neurogram-R、Hackl0us、elecV2、yichahucha、chavyleung、Liquor030、id77、zZPigle、NobyDa、passerby-b、rartv、blackmatrix7、privacy-protection-tools、ConnersHua、DivineEngine 等 GayHub guys
+# 感谢 GayHub guys
 # 私有备用库 https://github.com/asnfohsdgfbkxcv/AutoSyncScript
 
 [General]
@@ -24,12 +24,25 @@ URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 
 [URL Rewrite]
 ## Liquor030 https://github.com/Liquor030/Sub_Ruleset
-# Remove Super's Ad & Logo
+# 去除皮皮虾广告
 app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 
 ## Choler https://github.com/Choler/Surge
 # 抖音去广告
 ^https?:\/\/(.*)\.amemv\.com\/aweme\/v2\/(follow\/)?feed\/ https://$1.amemv.com/aweme/v1/$2feed/ header
+
+## id77 https://github.com/id77/QuantumultX
+# 知乎（部分替换为手机百度 Quark 的 User-Agent）
+^https:\/\/www\.zhihu\.com\/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 Quark/604.1 T7/10.7 SearchCraft/2.7.7 (Baidu; P1 9.0.0)$2
+# 知乎网页直接看
+^https://www\.zhihu\.com/question/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
+^https://zhuanlan\.zhihu\.com/p/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
+# 知乎网页去广告&推荐列表
+https://www\.zhihu\.com/api/v4/questions/\d+/related-readings url reject-200
+https://www\.zhihu\.com/api/v4/answers/\d+/related-readings url reject-200
+https://www\.zhihu\.com/api/v4/hot_recommendation url reject-200
+https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner url reject-200
+https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation url reject-200
 
 [Script]
 ## Neurogram-R  https://github.com/Neurogram-R/Surge
@@ -58,13 +71,13 @@ AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[
 
 ## yichahucha https://github.com/yichahucha/surge/tree/master
 # Display jd historical price
-http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+jd_price.js = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 # Display taobao historical price
-http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
-http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+tb_price.js = type=http-request,requires-body=1,pattern=^http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+tb_price.js = type=http-response,requires-body=1,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 # Weibo
-http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
-http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
+wb_launch.js = type=http-response,requires-body=1,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
+wb_ad.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 
 ## Choler https://github.com/Choler/Surge
 # 抖音去广告
@@ -114,10 +127,8 @@ http-request ^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list script-pa
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js
 
 ## Liquor030 https://github.com/Liquor030/Sub_Ruleset
-# 去除皮皮虾feed_ad
-http-response ^https?:\/\/.*\.snssdk\.com/bds/feed/stream/ requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js
-# Remove Super's Ad & Logo
-http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js
+# 去除皮皮虾水印
+Super.js = type=http-response,pattern="^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)",requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js
 
 ## zZPiglet https://github.com/zZPiglet/Task/tree/master
 # 航旅纵横签到
@@ -128,8 +139,6 @@ http-request ^https:\/\/cloud\.umetrip\.com\/gateway\/api\/web\/rest\/polite\/ap
 滴滴出行APPCookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
 滴滴出行小程序Cookie = type=http-request,pattern=^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
 
-## passerby-b https://gitee.com/passerby-b/javascript
-
 ## id77 https://github.com/id77/QuantumultX
 # 伊利乳品 - 小程序
 Rewrite: 伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
@@ -138,5 +147,9 @@ Tasks: 伊利乳品 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githu
 ## ZCY01 https://github.com/ZCY01/daily_scripts
 iOS/macOS限免APP检测 = type=cron,cronexp="1 8-22 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/app/free_app_detect.js
 
+## onewayticket255 https://github.com/onewayticket255/Surge-Script
+## passerby-b https://gitee.com/passerby-b/javascript
+## lhie1 https://github.com/lhie1/Rules/tree/master/Surge
+
 [MITM]
-hostname = %APPEND% zt.wps.cn, *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, cloud.umetrip.com, ccsp-egmas.sf-express.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
+hostname = %APPEND% www.zhihu.com, zhuanlan.zhihu.com, zt.wps.cn, *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, cloud.umetrip.com, ccsp-egmas.sf-express.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
