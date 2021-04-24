@@ -3,8 +3,8 @@
 #!system=ios
 
 # README.md
-# 感谢 lxk0301、shylocks、whyour、yangtingxiao、anker1209、i-chenzhe 等 GayHub guys
-# 私有备用库 https://github.com/asnfohsdgfbkxcv/AutoSyncScript
+# 感谢 GayHub guys
+# 备用库 https://github.com/asnfohsdgfbkxcv/AutoSyncScript
 
 [Script]
 ## 搬运lxk0301的Surge的Task&Cookies脚本模块地址: https://jdsharedresourcescdn.azureedge.net/jdresource/Surge/lxk0301_Task.sgmodule
@@ -82,6 +82,7 @@ crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,scri
 京喜token = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京喜token = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京喜token = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
+半自动领京豆 = type=cron,cronexp=30 18 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_zjd.js
 
 ## i-chenzhe https://share.r2ray.com/dust/i-chenzhe/
 百变大咖秀 = type=cron,cronexp="10 10,11 * * 2-5",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_entertainment.js
@@ -112,6 +113,9 @@ cron "0 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/script
 ## DD-D1 https://github.com/DD-D1/2020scripts
 京东读书 rewrite = type=http-request,pattern=^https:\/\/jdread-api\.jd\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js
 京东读书签到 = type=cron,cronexp=0 10 0 * * *,script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js
+## nianyuguai https://github.com/nianyuguai/longzhuzhu
+整点京豆雨 = type=cron,cronexp="1 0-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js
+直播间抽奖（全局） = type=cron,cronexp="5 8-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_live_lottery_social.js
 
 [MITM]
 hostname = %APPEND% jdread-api.jd.com, me-api.jd.com, wq.jd.com, m.jingxi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
