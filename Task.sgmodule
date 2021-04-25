@@ -45,6 +45,9 @@ https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner url reject-200
 https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation url reject-200
 
 [Script]
+## ZIYE https://github.cn/ziye888
+特仑苏（向往的生活）小程序获取ck = type=http-request,pattern=https:\/\/xw\.mengniu\.cn\/grass\/Api\/TelunsuHandler\.ashx\?method\=GetMyPrize,requires-header=1,max-size=0,script-path=https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js
+
 ## Neurogram-R  https://github.com/Neurogram-R/Surge
 # 1. 豆瓣电影移动版网页增强
 # 1.1 快捷跳转 茶杯狐、奈菲影视、555电影 搜索
@@ -151,4 +154,4 @@ iOS/macOS限免APP检测 = type=cron,cronexp="1 8-22 * * *",wake-system=1,timeou
 ## lhie1 https://github.com/lhie1/Rules/tree/master/Surge
 
 [MITM]
-hostname = %APPEND% www.zhihu.com, zhuanlan.zhihu.com, zt.wps.cn, *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, cloud.umetrip.com, ccsp-egmas.sf-express.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
+hostname = %APPEND% xw.mengniu.cn, www.zhihu.com, zhuanlan.zhihu.com, zt.wps.cn, *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, cloud.umetrip.com, ccsp-egmas.sf-express.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
