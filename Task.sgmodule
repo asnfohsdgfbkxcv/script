@@ -93,7 +93,7 @@ Rewrite: 顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-expr
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
 # AcFun 签到
 http-request ^https:\/\/api\-new\.app\.acfun\.cn\/rest\/app\/user\/personalInfo script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.cookie.js
-cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js
+cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js
 # APK.TW 签到
 http-request ^https://apk.tw\/member.php(.*?)action=login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js,requires-body=true
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js
@@ -120,7 +120,7 @@ http-request ^https:\/\/www\.smzdm\.com\/?.? script-path=https://raw.githubuserc
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js
 # V2EX 签到
 http-request ^https:\/\/www\.v2ex\.com\/mission\/daily script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
-cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
+cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
 # WPS
 http-request ^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js
