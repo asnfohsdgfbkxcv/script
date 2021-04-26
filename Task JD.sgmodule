@@ -63,7 +63,7 @@ crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,scri
 东东超市 = type=cron,cronexp="11 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_superMarket.js
 赚京豆 = type=cron,cronexp="10 0,7,23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_syj.js
 球队赢好礼 = type=cron,cronexp="10 1 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js
-取关京东店铺商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
+取关京东店铺商品 = type=cron,cronexp="* */2 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
 京喜签到 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jx_sign.js
 球队赢好礼 = type=cron,cronexp="10 16 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js
 领金贴 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jin_tie.js
@@ -115,6 +115,7 @@ cron "0 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/script
 ## DD-D1 https://github.com/DD-D1/2020scripts
 京东读书 rewrite = type=http-request,pattern=^https:\/\/jdread-api\.jd\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js
 京东读书签到 = type=cron,cronexp=0 10 0 * * *,script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js
+
 ## nianyuguai https://github.com/nianyuguai/longzhuzhu
 整点京豆雨 = type=cron,cronexp="1 0-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js
 直播间抽奖（全局） = type=cron,cronexp="5 8-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_live_lottery_social.js
