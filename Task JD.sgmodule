@@ -119,5 +119,8 @@ TCLxLINING = type=cron,cronexp="25 8 * * 4-5 *",wake-system=1,timeout=3600,scrip
 整点京豆雨 = type=cron,cronexp="1 0-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js
 直播间抽奖（全局） = type=cron,cronexp="5 8-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_live_lottery_social.js
 
+## 私库
+# 注销京东会员卡 = type=cron,cronexp="55 23 * * 6",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/jd_vip.js
+
 [MITM]
 hostname = %APPEND% jdread-api.jd.com, me-api.jd.com, wq.jd.com, m.jingxi.com, daojia.jd.com, api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
