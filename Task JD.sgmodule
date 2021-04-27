@@ -63,8 +63,7 @@ crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,scri
 东东超市 = type=cron,cronexp="11 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_superMarket.js
 赚京豆 = type=cron,cronexp="10 0,7,23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_syj.js
 球队赢好礼 = type=cron,cronexp="10 1 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js
-取关京东店铺商品 = type=cron,cronexp="*/5 23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
-取关京东店铺商品（试用js前） = type=cron,cronexp="*/10 8,9 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
+取关京东店铺商品 = type=cron,cronexp="*/10 8,9,11,20,23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
 京喜签到 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jx_sign.js
 球队赢好礼 = type=cron,cronexp="10 16 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js
 领金贴 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jin_tie.js
