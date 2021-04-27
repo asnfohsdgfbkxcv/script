@@ -3,17 +3,19 @@
 是注销京东已开的店铺会员,不是京东plus会员
 查看已开店铺会员入口:我的=>我的钱包=>卡包
 脚本兼容: Quantumult X, Surge, Loon, JSBox, Node.js
+# author: @LXK9301
+# last modified: @asnfohsdgfbkxcv
 ==========Quantumult X==========
 [task_local]
-#注销京东会员卡
-55 23 * * 6 https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js, tag=注销京东会员卡, img-url= https://raw.githubusercontent.com/58xinian/icon/master/jd_unbind.png, enabled=true
+# 注销京东会员卡
+55 23 * * 6 https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/jd_vip.js, tag=注销京东会员卡
 =======Loon========
 [Script]
-cron "55 23 * * 6" script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js,tag=注销京东会员卡
+cron "55 23 * * 6" script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/jd_vip.js,tag=注销京东会员卡
 ========Surge==========
-注销京东会员卡 = type=cron,cronexp="55 23 * * 6",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js
+注销京东会员卡 = type=cron,cronexp="55 23 * * 6",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/jd_vip.js
 =======小火箭=====
-注销京东会员卡 = type=cron,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js, cronexpr="10 23 * * 6", timeout=3600, enable=true
+注销京东会员卡 = type=cron,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/jd_vip.js, cronexpr="10 23 * * 6", timeout=3600, enable=true
  */
 const $ = new Env('获取京东会员卡注销链接');
 //Node.js用户请在jdCookie.js处填写京东ck;
