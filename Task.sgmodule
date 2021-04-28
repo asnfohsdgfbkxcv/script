@@ -4,7 +4,6 @@
 
 # README.md
 # 感谢 GayHub guys
-# 私有备用库 https://github.com/asnfohsdgfbkxcv/AutoSyncScript
 
 [General]
 ## Choler https://github.com/Choler/Surge
@@ -18,7 +17,7 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/a
 ## blackmatrix7 https://github.com/blackmatrix7/ios_rule_script
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Advertising/Advertising_Domain.list,REJECT
 
-# Choler https://github.com/Choler/Surge
+## Choler https://github.com/Choler/Surge
 # 优酷去片头广告
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 
@@ -69,7 +68,7 @@ http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-b
 ## RARTV https://github.com/rartv/SurgeScript
 Emby Premiere Unlock = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/rartv/SurgeScript/main/EmbyPremiere/EmbyPremiere.js
 
-## 私有库
+## 私有备用库 https://github.com/asnfohsdgfbkxcv/AutoSyncScript
 AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?, requires-body=true, script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/iOS_Weather_AQI_Standard.js
 
 ## yichahucha https://github.com/yichahucha/surge/tree/master
