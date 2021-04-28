@@ -64,6 +64,8 @@ TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v
 抖音去广告&水印res = type=http-response,pattern=^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
 # Baidu netdisc unlocks online video play speed
 http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
+# 哔哩哔哩, 港澳台番剧自动切换地区 & 显示豆瓣评分
+Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 
 ## RARTV https://github.com/rartv/SurgeScript
 Emby Premiere Unlock = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/rartv/SurgeScript/main/EmbyPremiere/EmbyPremiere.js
@@ -153,4 +155,4 @@ iOS/macOS限免APP检测 = type=cron,cronexp="1 8-22 * * *",wake-system=1,timeou
 ## lhie1 https://github.com/lhie1/Rules/tree/master/Surge
 
 [MITM]
-hostname = %APPEND% xw.mengniu.cn, www.zhihu.com, zhuanlan.zhihu.com, zt.wps.cn, *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, cloud.umetrip.com, ccsp-egmas.sf-express.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
+hostname = %APPEND% xw.mengniu.cn, www.zhihu.com, zhuanlan.zhihu.com, zt.wps.cn, *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, cloud.umetrip.com, ccsp-egmas.sf-express.com, *.googlevideo.com, *.amemv.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, ap?.bilibili.com, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
