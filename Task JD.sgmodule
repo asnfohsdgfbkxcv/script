@@ -116,7 +116,8 @@ interCenter渠道店铺签到 = type=cron,cronexp="0 0 * * *",wake-system=1,time
 京东读书签到 = type=cron,cronexp=0 10 0 * * *,script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js
 
 ## nianyuguai https://github.com/nianyuguai/longzhuzhu
-整点京豆雨 = type=cron,cronexp="1 0-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js
+整点京豆雨 = type=cron,cronexp="1 0-23/1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js
+半点京豆雨 = type=cron,cronexp="30 20-23/1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js
 直播间抽奖（全局） = type=cron,cronexp="5 8-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_live_lottery_social.js
 
 ## 私库
