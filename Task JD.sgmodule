@@ -92,7 +92,7 @@ crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,scri
 京东超市-大转盘 = type=cron,cronexp="3 10 * * *",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_marketLottery.js
 母婴-跳一跳 = type=cron,cronexp="5 8,14,20 * 4 *",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js
 摇一摇 = type=cron,cronexp="3 20 * * *",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_shake.js
-5G超级盲盒 = type=cron,cronexp="5 1,6,11,16,21 * 3-4 * ",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_super5g.js
+# 5G超级盲盒 = type=cron,cronexp="5 1,6,11,16,21 * 3-4 * ",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_super5g.js
 京东小魔方 = type=cron,cronexp="10 10 * 4 *",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_xmf.js
 加购有礼 = type=cron,cronexp="15 12 * * *",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/car/monk_shop_add_to_car.js
 店铺大转盘 = type=cron,cronexp="3 0,10,23 * * *",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/normal/monk_shop_lottery.js
