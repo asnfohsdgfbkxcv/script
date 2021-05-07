@@ -51,10 +51,6 @@ tb_price.js = type=http-response,requires-body=1,pattern=^https?://trade-acs\.m\
 wb_launch.js = type=http-response,requires-body=1,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
 wb_ad.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 
-## Choler https://github.com/Choler/Surge
-# YouTube Premium 不适用该脚本
-YTB跳过片头广告 = type=http-request,pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://choler.github.io/Surge/Script/YouTube.js
-
 ## chavyleung https://github.com/chavyleung/scripts
 # BoxJs 稳定版
 Rewrite: BoxJs = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
@@ -119,6 +115,7 @@ iOS/macOS限免APP检测 = type=cron,cronexp="1 8-22 * * *",wake-system=1,timeou
 ## Choler https://github.com/Choler/Surge
 ## id77 https://github.com/id77/QuantumultX
 ## ZIYE https://github.cn/ziye888
+## https://github.com/yjqiang/surge_scripts/tree/main/modules
 
 [MITM]
-hostname = %APPEND% *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, ccsp-egmas.sf-express.com, *.googlevideo.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, ap?.bilibili.com, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
+hostname = %APPEND% *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, ccsp-egmas.sf-express.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, ap?.bilibili.com, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
