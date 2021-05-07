@@ -1,4 +1,4 @@
-# see you guys, no more update.
+# See you guys, no more update.
 
 # script
 
