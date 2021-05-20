@@ -88,6 +88,8 @@ crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,scri
 京享值PK = type=cron,cronexp="15 8,13,18 17-31 5 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_pk.js
 众筹许愿池 = type=cron,cronexp="10 10,15 8-9 5 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_wish.js
 超级无线组队分奖品 = type=cron,cronexp="25 3 * * 2",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js
+飞利浦电视成长记 = type=cron,cronexp="15 9 * 5,6 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_flp.js
+赢一加新品手机 = type=cron,cronexp="25 9 * 5,6 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_oneplus.js
 
 ## i-chenzhe https://share.r2ray.com/dust/i-chenzhe/
 # 百变大咖秀 = type=cron,cronexp="10 10,11 * * 2-5",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_entertainment.js
