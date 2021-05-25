@@ -129,6 +129,9 @@ interCenter渠道店铺签到 = type=cron,cronexp="0 0 * * *",wake-system=1,time
 半点京豆雨 = type=cron,cronexp="30 20-23/1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js
 # 直播间抽奖（全局） = type=cron,cronexp="5 8-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_live_lottery_social.js
 
+## yangtingxiao
+动物联萌 = type=cron,cronexp=5 * * * *,wake-system=1,timeout=500,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_zoo.js
+
 ## 私库
 # 注销京东会员卡 = type=cron,cronexp="55 23 * * 6",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/jd_vip.js
 
