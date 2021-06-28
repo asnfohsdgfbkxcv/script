@@ -12,12 +12,18 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/a
 ## blackmatrix7 https://github.com/blackmatrix7/ios_rule_script
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Advertising/Advertising_Domain.list,REJECT
 
+[Header Rewrite]
+# 知乎（部分替换为手机百度 Quark 的 User-Agent）
+^https?:\/\/www\.zhihu\.com header-replace User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
+
 [URL Rewrite]
 ## Liquor030 https://github.com/Liquor030/Sub_Ruleset
 # 去除皮皮虾广告
 app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 
 [Script]
+# 百度（全站替换为手机百度 Quark 的 User-Agent）
+BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/BaiduChangeUA.js
 ## Neurogram-R  https://github.com/Neurogram-R/Surge
 # 1. 豆瓣电影移动版网页增强
 # 1.1 快捷跳转 茶杯狐、奈菲影视、555电影 搜索
@@ -95,16 +101,10 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 # 去除皮皮虾水印
 Super.js = type=http-response,pattern="^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)",requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js
 
-## zZPiglet https://github.com/zZPiglet/Task/tree/master
 # 滴滴出行
-滴滴出行 = type=cron,cronexp="0 1,20,21 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
-滴滴出行APPCookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
-滴滴出行小程序Cookie = type=http-request,pattern=^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
-
-## id77 https://github.com/id77/QuantumultX
-# 伊利乳品 - 小程序
-Rewrite: 伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
-Tasks: 伊利乳品 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js,wake-system=true
+滴滴出行 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/didi.js
+滴滴出行cookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?.*city=(\d*)&.*ticket=(.*)&,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/didi.cookie.js
+滴滴出行cookie = type=http-request,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/bosp-api\/lottery\/info?.*lid=([^&]*),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/didi.cookie.js
 
 ## ZCY01 https://github.com/ZCY01/daily_scripts
 iOS/macOS限免APP检测 = type=cron,cronexp="1 8-22 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/app/free_app_detect.js
@@ -116,6 +116,7 @@ iOS/macOS限免APP检测 = type=cron,cronexp="1 8-22 * * *",wake-system=1,timeou
 ## id77 https://github.com/id77/QuantumultX
 ## ZIYE https://github.cn/ziye888
 ## https://github.com/yjqiang/surge_scripts/tree/main/modules
+## zZPiglet https://github.com/zZPiglet/Task/tree/master
 
 [MITM]
-hostname = %APPEND% *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, ccsp-egmas.sf-express.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, club.yili.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, ap?.bilibili.com, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
+hostname = %APPEND% *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, ccsp-egmas.sf-express.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, ap?.bilibili.com, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com, *.baidu.com, www.zhihu.com
