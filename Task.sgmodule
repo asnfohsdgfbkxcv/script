@@ -4,17 +4,19 @@
 
 # README.md
 # 感谢 GayHub guys
+## blackmatrix7 https://github.com/blackmatrix7/ios_rule_script
+## onewayticket255 https://github.com/onewayticket255/Surge-Script
+## passerby-b https://gitee.com/passerby-b/javascript
+## lhie1 https://github.com/lhie1/Rules/tree/master/Surge
+## Choler https://github.com/Choler/Surge
+## id77 https://github.com/id77/QuantumultX
+## ZIYE https://github.cn/ziye888
+## https://github.com/yjqiang/surge_scripts/tree/main/modules
+## zZPiglet https://github.com/zZPiglet/Task/tree/master
 
 [Rule]
 ## privacy-protection-tools https://github.com/privacy-protection-tools/anti-AD
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-surge2.txt,REJECT
-
-## blackmatrix7 https://github.com/blackmatrix7/ios_rule_script
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Advertising/Advertising_Domain.list,REJECT
-
-[Header Rewrite]
-# 知乎（部分替换为手机百度 Quark 的 User-Agent）
-^https?:\/\/www\.zhihu\.com header-replace User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
+DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT
 
 [URL Rewrite]
 ## Liquor030 https://github.com/Liquor030/Sub_Ruleset
@@ -22,8 +24,6 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/
 app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 
 [Script]
-# 百度（全站替换为手机百度 Quark 的 User-Agent）
-BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/BaiduChangeUA.js
 ## Neurogram-R  https://github.com/Neurogram-R/Surge
 # 1. 豆瓣电影移动版网页增强
 # 1.1 快捷跳转 茶杯狐、奈菲影视、555电影 搜索
@@ -74,10 +74,6 @@ http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.g
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js
 # bilibili 银瓜子转硬币
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
-# CSDN 签到
-http-request ^https:\/\/passport.csdn.net\/v2\/api\/app\/login\/checkAndRefreshToken script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js
-http-request ^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_draw\/login\/sign_in\? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js
-cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.js
 # 威锋网 (APP)
 Rewrite: feng = type=http-request,pattern=^http:\/\/49.234.36.200:9091\/v1\/auth\/signin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js,requires-body=true
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.js
@@ -109,14 +105,5 @@ Super.js = type=http-response,pattern="^https?://.*\.snssdk\.com/bds/(feed/strea
 ## ZCY01 https://github.com/ZCY01/daily_scripts
 iOS/macOS限免APP检测 = type=cron,cronexp="1 8-22 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/app/free_app_detect.js
 
-## onewayticket255 https://github.com/onewayticket255/Surge-Script
-## passerby-b https://gitee.com/passerby-b/javascript
-## lhie1 https://github.com/lhie1/Rules/tree/master/Surge
-## Choler https://github.com/Choler/Surge
-## id77 https://github.com/id77/QuantumultX
-## ZIYE https://github.cn/ziye888
-## https://github.com/yjqiang/surge_scripts/tree/main/modules
-## zZPiglet https://github.com/zZPiglet/Task/tree/master
-
 [MITM]
-hostname = %APPEND% *.smzdm.com, i.meituan.com, *.csdn.net, m.douban.com, pan.baidu.com, ccsp-egmas.sf-express.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, ap?.bilibili.com, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com, *.baidu.com, www.zhihu.com
+hostname = %APPEND% *.smzdm.com, i.meituan.com, m.douban.com, pan.baidu.com, ccsp-egmas.sf-express.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, lkyl.dianpusoft.cn, as.xiaojukeji.com, www.52pojie.cn, *.acfun.cn, apk.tw, ap?.bilibili.com, *.bilibili.com, 49.234.36.200:9091, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
