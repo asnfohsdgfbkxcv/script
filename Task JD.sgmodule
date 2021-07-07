@@ -13,11 +13,7 @@
 [Script]
 领京豆额外奖励 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_bean_home.js
 签到领现金 = type=cron,cronexp="2 0-23/4 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_cash.js
-京喜财富岛 = type=cron,cronexp="5 0,8,13,19 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_cfd.js
 摇京豆 = type=cron,cronexp="5 0,23 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_club_lottery.js
-crazyJoy任务 = type=cron,cronexp="10 9 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_crazy_joy.js
-监控crazyJoy分红 = type=cron,cronexp="10 12 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_crazy_joy_bonus.js
-crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_crazy_joy_coin.js
 京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_dreamFactory.js
 东东农场 = type=cron,cronexp="5 6-18/6 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_fruit.js
 获取互助码 = type=cron,cronexp="20 13 * * 6",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_get_share_code.js
@@ -44,7 +40,6 @@ crazyJoy挂机 = type=cron,cronexp="10 1,12 * * *",wake-system=1,timeout=20,scri
 东东超市 = type=cron,cronexp="11 * * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_superMarket.js
 赚京豆 = type=cron,cronexp="10 0,7,23 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_syj.js
 取关京东店铺商品 = type=cron,cronexp="0 9,11,20 * * *",wake-system=1,timeout=3600,script-path=https://cdn.jsdelivr.net/gh/panghu999/jd_scripts@master/jd_unsubscribe.js
-
 
 ## NobyDa https://github.com/NobyDa/Script/tree/master
 京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
