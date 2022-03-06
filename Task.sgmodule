@@ -65,7 +65,7 @@ Rewrite: feng = type=http-request,pattern=^http:\/\/49.234.36.200:9091\/v1\/auth
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.js
 # 哈啰出行 APP
 http-request ^https:\/\/gameapi\.hellobike\.com\/api script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js, requires-body=true
-cron "5 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js
 # 什么值得买
 http-request ^https:\/\/www\.smzdm\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js
