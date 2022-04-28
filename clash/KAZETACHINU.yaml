@@ -1,5 +1,5 @@
 payload:  
   # > KAZETACHINU
   # - USER-AGENT,KAZETACHINU*
-  - DOMAIN-KEYWORD,trello
-  - DOMAIN-SUFFIX,trello.com
+  - KEYWORD,trello
+  - SUFFIX,trello.com
