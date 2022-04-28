@@ -11,7 +11,7 @@ parsers:
             path: ./Rules/KAZETACHINU
             interval: 86400
       prepend-proxy-groups:
-         - name: PayPal
+         - name: KAZETACHINU
            type: select
            proxies:
              - DIRECT
