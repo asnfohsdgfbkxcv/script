@@ -7,7 +7,7 @@ parsers:
           KAZETACHINU:
             type: http
             behavior: classical
-            url: https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/clash/KAZETACHINU.yaml
+            url: https://gitee.com/qishan6845/script/raw/master/clash/KAZETACHINU.yaml
             path: ./Rules/KAZETACHINU
             interval: 86400
       prepend-proxy-groups:
