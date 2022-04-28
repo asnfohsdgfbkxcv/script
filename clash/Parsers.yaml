@@ -1,0 +1,10 @@
+parsers:
+  - url: https://example.com/profile.yaml
+    yaml:
+      prepend-rules:
+        - DOMAIN,test.com,DIRECT # rules最前面增加一个规则
+      append-proxies:
+        - name: test # proxies最后面增加一个服务
+          type: http
+          server: 123.123.123.123
+          port: 456
