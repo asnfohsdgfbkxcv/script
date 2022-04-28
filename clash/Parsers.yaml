@@ -10,10 +10,9 @@ parsers:
             url: https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/clash/KAZETACHINU.yaml
             path: ./Rules/KAZETACHINU
             interval: 86400
-       prepend-proxy-groups:
+      prepend-proxy-groups:
          - name: PayPal
            type: select
            proxies:
              - DIRECT
              - Proxy
-
