@@ -3,10 +3,10 @@ parsers:
     yaml:
       prepend-rules:
         - RULE-SET,KAZETACHINU,KAZETACHINU
-       mix-rule-providers:
+      mix-rule-providers:
           KAZETACHINU:
             type: http
             behavior: classical
-            url: https://dler.cloud/Rules/Clash/Provider/Reject.yaml
+            url: https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/clash/KAZETACHINU.yaml
             path: ./Rules/KAZETACHINU
             interval: 86400
