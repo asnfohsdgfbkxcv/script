@@ -2,17 +2,5 @@ parsers:
   - url: https://example.com/profile.yaml
     yaml:
       prepend-rules:
-        - RULE-SET,ABCD,ABCD
-      mix-rule-providers:
-          KAZETACHINU:
-            type: http
-            behavior: classical
-            url: https://gitee.com/qishan6845/script/raw/master/clash/ABCD.yaml
-            path: ./RuleSet/ABCD
-            interval: 86400
-      prepend-proxy-groups:
-         - name: ABCD
-           type: select
-           proxies:
-             - DIRECT
-             - Proxy
+        - DOMAIN-KEYWORD,trello,Proxy
+        - DOMAIN-SUFFIX,trello.com,Proxy
