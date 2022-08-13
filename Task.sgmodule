@@ -22,10 +22,7 @@ Q-Search = type=http-request,pattern=^https:\/\/duckduckgo.com\/\?q=.+,script-pa
 ## NobyDa https://github.com/NobyDa/Script/tree/master/Surge
 TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 吾爱签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
-吾爱获取 Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
-
-## RARTV https://github.com/rartv/SurgeScript
-Emby Premiere Unlock = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/rartv/SurgeScript/main/EmbyPremiere/EmbyPremiere.js
+吾爱获取 Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie
 
 iOS15美标空气质量 = type=http-response,pattern=https://weather-data.apple.com/v2/weather/[\w-]+/-?[0-9]+\.[0-9]+/-?[0-9]+\.[0-9]+\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/js/iOS_Weather_AQI_Standard.js
 
@@ -66,4 +63,4 @@ Super.js = type=http-response,pattern="^https?://.*\.snssdk\.com/bds/(feed/strea
 ## ZCY01 https://github.com/ZCY01/daily_scripts
 
 [MITM]
-hostname = %APPEND% m.douban.com, testflight.apple.com, mb3admin.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, www.52pojie.cn, ap?.bilibili.com, *.bilibili.com, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
+hostname = %APPEND% m.douban.com, testflight.apple.com, duckduckgo.com, weather-data.apple.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, www.52pojie.cn, ap?.bilibili.com, *.bilibili.com, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
