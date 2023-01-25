@@ -1,5 +1,5 @@
 #!name=Task Module
-#!desc=签到、去广告、脚本
+#!desc=去广告、脚本
 #!system=ios
 
 # README.md
@@ -24,9 +24,6 @@ http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.g
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js
 # bilibili 银瓜子转硬币
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
-# 哈啰出行 APP
-http-request ^https:\/\/gameapi\.hellobike\.com\/api script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js, requires-body=true
-cron "5 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js
 # V2EX 签到
 http-request ^https:\/\/www\.v2ex\.com\/mission\/daily script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
 cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
@@ -47,4 +44,4 @@ Super.js = type=http-response,pattern="^https?://.*\.snssdk\.com/bds/(feed/strea
 ## ZCY01 https://github.com/ZCY01/daily_scripts
 
 [MITM]
-hostname = %APPEND% m.douban.com, testflight.apple.com, duckduckgo.com, ap?.bilibili.com, *.bilibili.com, gameapi.hellobike.com, *.v2ex.com, *.snssdk.com
+hostname = %APPEND% m.douban.com, testflight.apple.com, duckduckgo.com, ap?.bilibili.com, *.bilibili.com, *.v2ex.com, *.snssdk.com
